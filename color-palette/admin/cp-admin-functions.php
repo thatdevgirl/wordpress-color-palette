@@ -10,8 +10,8 @@ function cp_options_display() {
     }
 
     // Set up admin CSS and JS.
-    wp_enqueue_style('cp-admin-styles', plugin_dir_url( __FILE__ ) . 'css/cp-styles.css');
-    wp_enqueue_script('cp-admin-styles', plugin_dir_url( __FILE__ ) . 'js/cp-primary.js');
+    wp_enqueue_style('cp-admin-styles', plugin_dir_url( __FILE__ ) . 'css/cp-admin-styles.css');
+    wp_enqueue_script('cp-admin-styles', plugin_dir_url( __FILE__ ) . 'js/cp-admin-primary.js');
 
     // Get saved primary colors.
     $primaryColors = cp_get_primary_colors();

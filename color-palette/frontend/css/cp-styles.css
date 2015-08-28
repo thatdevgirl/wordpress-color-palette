@@ -1,0 +1,30 @@
+.primary-color {
+    float: left;
+    margin-top: 3em;
+    text-align: center;
+    width: 20em;
+}
+
+.primary-color__p {
+    margin: 0;
+}
+
+.primary-color__div--swatch {
+    border-radius: 75px;
+    height: 150px;
+    margin: 0 auto 1em;
+    width: 150px;
+}
+
+.tints__p {
+    margin: 0;
+    padding: 0.5em 1em;
+}
+
+.tints__td {
+    padding: 0.5em 1em;
+}
+
+.tints__table {
+    background: #fff;
+}
