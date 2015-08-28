@@ -36,7 +36,7 @@ function cp_get_primary_colors() {
 
         // Put a "settings saved" message on the screen
         ?>
-        <div class="updated"><p><strong><?php _e('settings saved.', 'menu-test' ); ?></strong></p></div>
+        <div class="updated"><p><strong><?php _e('Color palette settings have been saved.', 'menu-test' ); ?></strong></p></div>
         <?php
     }
 

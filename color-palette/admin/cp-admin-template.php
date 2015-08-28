@@ -1,8 +1,8 @@
-<h1>Color Palette Settings</h1>
+<h1 class="cp__h1">Color Palette Settings</h1>
 
 <p>Use this page to set up the primary colors of your web site's style guide.</p>
 
-<h2>Primary Colors</h2>
+<h2 class="cp__h2">Primary Colors</h2>
 
 <p>These are the primary colors used on your site and in your brand.</p>
 
@@ -25,7 +25,7 @@
         <?php endforeach; ?>
     </section>
 
-    <a href="#" class="cp-primary--add">Add Color</a>
+    <a href="#" class="cp--button cp-primary--add">Add Color</a>
 
-    <input type="submit" value="Create Palette" />
+    <input type="submit" value="Create Palette" class="cp--button cp__input--submit" />
 </form>

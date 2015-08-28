@@ -1,3 +1,76 @@
+/* ----------------------------------
+ * Generic admin styles
+ * ---------------------------------- */
+
+.cp__h1 {
+    margin-top: 0.8em;
+}
+
+.cp__h2 {
+    border-top: 1px solid #000;
+    margin-right: 1em;
+    margin-top: 2em;
+    padding: 0.5em 0;
+}
+
+/* ----------------------------------
+ * Button styles
+ * ---------------------------------- */
+
+.cp--button {
+    background-color: #444;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    padding: .25em;
+    text-align: center;
+    text-decoration: none;
+    width: 7em;
+}
+
+.cp--button:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.cp__input--submit {
+    background-color: #900;
+    margin-top: 4em;
+    width: 10em;
+}
+
+.cp__input--submit:hover {
+    background-color: #700;
+}
+
+/* ----------------------------------
+ * Primary color admin form styles
+ * ---------------------------------- */
+
+#cp-primary {
+    margin-top: 2em;
+}
+
+.cp-primary {
+    margin: 1em 0;
+}
+
 .cp-primary label {
+    display: inline-block;
     font-weight: bold;
+    position: relative;
+    top: -2px;
+    width: 5em;
+}
+
+.cp-primary--add {
+    margin: 1em 0 1em 6em;
+}
+
+.cp-primary--del {
+    color: #f00;
+    font-weight: bold;
+    text-decoration: none;
 }
