@@ -14,6 +14,8 @@ This WordPress plugin adds color palettes to your branding and style guide pages
 
 The [primarycolors] shortcode adds a block that will display all of your brand's primary colors.
 
+The [accentcolors] shortcode adds a block that will display all of your brand's accent colors.  These can be colors that compliment your primary colors, for example.
+
 == Installation ==
 
 Upload the plugin to your WordPress installation and activate it.

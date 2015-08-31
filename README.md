@@ -12,3 +12,5 @@ What are the shortcodes?
 --------------------
 
 __primarycolors:__ This shortcode adds a block that will display all of your brand's primary colors.
+
+__accentcolors:__ This shortcode adds a block that will display all of your brand's accent colors.  These can be colors that compliment your primary colors, for example.
