@@ -1,9 +1,9 @@
 var cpAdminPrimary = {
-    className: 'cp-primary',
+    colorTypes: [],
 
     init: function() {
-        // Get number of primary colors.
-        this.colorCount = document.getElementsByClassName(this.className).length;
+        this.colorTypes['cp-primary'] = document.getElementById('cp-primary');
+        this.colorTypes['cp-accent']  = document.getElementById('cp-accent');
 
         // Create clone of primary color form row.
         this.clone = this.cloneFormRow();
@@ -17,42 +17,44 @@ var cpAdminPrimary = {
 
     cloneFormRow: function() {
         // Get the block and create the clone.
-        var block = document.getElementsByClassName(this.className)[0];
+        var block = document.getElementsByClassName('template')[0];
         var clone = block.cloneNode(true);
-
-        // Clear out the name and value attributes.
-        clone.getElementsByTagName('input')[0].setAttribute('value', '');
-        clone.getElementsByTagName('input')[0].setAttribute('name', '');
-
         return clone;
     },
 
     setAddEvent: function() {
         var _this = this;
-        var addLink = document.getElementsByClassName('cp-primary--add')[0];
+        var addLinks = document.getElementsByClassName('cp--add');
 
-        addLink.onclick = function(e) {
-            e.preventDefault();
-            _this.addEvent(this);
-        };
+        for (var i=0; i<addLinks.length; i++) {
+            addLinks[i].onclick = function(e) {
+                e.preventDefault();
+                _this.addEvent(this);
+            };
+        }
     },
 
     addEvent: function(context) {
+        // Get parent node information.
+        var parent    = context.parentNode;
+        var container = parent.getElementsByTagName('div')[0];
+
+        var id   = parent.getAttribute('id');
+        var name = parent.getAttribute('data-name');
+        
+        // Get number of elements for that color.
+        var count = this.colorTypes[id].getElementsByClassName('cp-colors').length;
+
+        // Set up the new row.
         var clone = this.clone.cloneNode(true);
-        clone.getElementsByTagName('input')[0].setAttribute('name', 'primaryColors[' + this.colorCount + ']');
+        clone.getElementsByTagName('input')[0].setAttribute('name', name + '[' + count + ']');
 
-        this.colorCount++;
-
-        document.getElementById('cp-primary').innerHTML += '<div class="' 
-                                                        +  this.className 
-                                                        +  '">' 
-                                                        +  clone.innerHTML 
-                                                        + '</div>';
+        container.innerHTML += clone.innerHTML;
     },
 
     setDelEvent: function() {
         var _this = this;
-        var delLinks = document.getElementsByClassName('cp-primary--del');
+        var delLinks = document.getElementsByClassName('cp--del');
 
         for (var i=0; i<delLinks.length; i++) {
             delLinks[i].onclick = function(e) {

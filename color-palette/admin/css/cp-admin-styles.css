@@ -13,6 +13,14 @@
     padding: 0.5em 0;
 }
 
+.template {
+    display: none;
+}
+
+a {
+    outline: none;
+}
+
 /* ----------------------------------
  * Button styles
  * ---------------------------------- */
@@ -30,7 +38,8 @@
     width: 7em;
 }
 
-.cp--button:hover {
+.cp--button:hover,
+.cp--button:focus {
     background-color: #222;
     color: #fff;
 }
@@ -41,7 +50,8 @@
     width: 10em;
 }
 
-.cp__input--submit:hover {
+.cp__input--submit:hover,
+.cp__input--submit:focus {
     background-color: #700;
 }
 
@@ -49,15 +59,11 @@
  * Primary color admin form styles
  * ---------------------------------- */
 
-#cp-primary {
-    margin-top: 2em;
-}
-
-.cp-primary {
+.cp-colors {
     margin: 1em 0;
 }
 
-.cp-primary label {
+.cp-colors label {
     display: inline-block;
     font-weight: bold;
     position: relative;
@@ -65,11 +71,11 @@
     width: 5em;
 }
 
-.cp-primary--add {
+.cp--add {
     margin: 1em 0 1em 6em;
 }
 
-.cp-primary--del {
+.cp--del {
     color: #f00;
     font-weight: bold;
     text-decoration: none;
