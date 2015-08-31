@@ -1,4 +1,4 @@
-var cpAdminPrimary = {
+var cpAdmin = {
     colorTypes: [],
 
     init: function() {
@@ -70,4 +70,4 @@ var cpAdminPrimary = {
     }
 };
 
-cpAdminPrimary.init();
+cpAdmin.init();
