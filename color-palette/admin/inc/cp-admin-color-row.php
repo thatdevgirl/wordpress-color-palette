@@ -10,7 +10,7 @@ function insertColorRow($arr, $id, $fieldName) {
                         <label>Color</label>
                         
                         <span>
-                            #<input name="<?php echo $fieldName . '[' . $key . ']'; ?>" value="<?php echo $arr[$key] ?>" />
+                            #<input type="text" pattern="^([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$" name="<?php echo $fieldName . '[' . $key . ']'; ?>" value="<?php echo $arr[$key] ?>" maxlength="6" />
                         </span>
                         
                         <a href="#" class="cp--del">x</a>
