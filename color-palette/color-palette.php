@@ -37,4 +37,4 @@ SOFTWARE.
 */
 
 require('admin/cp-admin-functions.php');
-require('cp-shortcode.php');
+require('frontend/cp-shortcode.php');

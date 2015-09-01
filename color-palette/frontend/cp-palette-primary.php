@@ -1,6 +1,13 @@
 <section class="colors__section">
     <h3>Primary Palette</h3>
 
+    <?php 
+        /* Iterate over the primaryColors associative array.  
+         * Key is the color name.
+         * Value is the color hex.
+         */ 
+    ?>
+
     <?php foreach ($primaryColors as $key => $color): ?>
         <div class="primary-color">
             <div class="primary-color__div--swatch" style="background: #<?php echo $color; ?> "></div>

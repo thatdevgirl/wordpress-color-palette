@@ -1,6 +1,13 @@
 <section class="colors__section">
     <h3>Accent Palette</h3>
 
+    <?php 
+        /* Iterate over the accentColors associative array.  
+         * Key is the color name.
+         * Value is the color hex.
+         */ 
+    ?>
+
     <?php foreach ($accentColors as $key => $color): ?>
         <?php $rgb = implode(', ', hex2rgb($color)); ?>
         <?php $cmyk = implode(', ', hex2cmyk($color)); ?>
