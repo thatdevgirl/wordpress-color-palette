@@ -12,7 +12,7 @@ var cpAdmin = {
         this.setAddEvent();
 
         // Set up delete click event.
-        this.setDelEvent();
+        this.setDelEvents();
     },
 
     cloneFormRow: function() {
@@ -30,6 +30,7 @@ var cpAdmin = {
             addLinks[i].onclick = function(e) {
                 e.preventDefault();
                 _this.addEvent(this);
+                _this.setDelEvents();
             };
         }
     },
@@ -52,7 +53,7 @@ var cpAdmin = {
         container.innerHTML += clone.innerHTML;
     },
 
-    setDelEvent: function() {
+    setDelEvents: function() {
         var _this = this;
         var delLinks = document.getElementsByClassName('cp--del');
 

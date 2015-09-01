@@ -20,14 +20,4 @@
     <input type="submit" value="Create Palette" class="cp--button cp__input--submit" />
 </form>
 
-<div class="template">
-    <div class="cp-colors">
-        <label>Color</label>
-        
-        <span>
-            #<input name="" value="" />
-        </span>
-        
-        <a href="#" class="cp--del">x</a>
-    </div>
-</div>
+<?php require('inc/cp-admin-color-row-template.php'); ?>

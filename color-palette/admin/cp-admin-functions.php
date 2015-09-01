@@ -48,23 +48,23 @@ function cp_save_colors($colorType) {
 }
 
 function cp_get_colors_from_form($colorType) {
-    $colors = $_POST[$colorType];
+    $colorHexes = $_POST[$colorType];
+    $colorNames = $_POST[$colorType . 'Names'];
 
     // If there are no colors, return the empty value.
-    if (!$colors) {
-        return $colors;
+    if (!$colorHexes) {
+        return [];
     }
+
+    // Create a new empty array to house the associative array.
+    $colors = [];
 
     // Check to make sure each element in the array has a value.
-    foreach ($colors as $key => $color) {
-        // If an element has no value, delete it.
-        if (!$color) {
-            unset($colors[$key]);
+    foreach ($colorHexes as $key => $color) {
+        if ($color) {
+            $colors[$colorNames[$key]] = $color;
         }
     }
-
-    // Resequence the array if values were deleted from the middle.
-    $colors = array_values($colors);
 
     return $colors;
 }
