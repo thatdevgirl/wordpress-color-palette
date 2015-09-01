@@ -25,7 +25,6 @@ Upload the plugin to your WordPress installation and activate it.
 == Screenshots ==
 
 1. Example screenshot of the admin screen, where a content creator can set up the site's primary and accent palettes.  The admin screen can be found in Settings > Color Palette.
-
 2. Example screenshot of a page containing the [primarycolors] and [accentcolors] shortcodes.
 
 == Changelog ==
