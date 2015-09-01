@@ -37,7 +37,7 @@
 .tints {
     float: left;
     margin: 1em 1em 0;
-    width: 30em;
+    width: 20em;
 }
 
 .tints__header {
@@ -57,4 +57,5 @@
 .tints__p--tint {
     margin: 0;
     padding: 0.5em;
+    text-align: center;
 }

@@ -1,12 +1,16 @@
 <section class="colors__section">
     <h3>Accent Palette</h3>
 
-    <?php foreach ($accentColors as $color): ?>
+    <?php foreach ($accentColors as $key => $color): ?>
         <?php $rgb = implode(', ', hex2rgb($color)); ?>
         <?php $cmyk = implode(', ', hex2cmyk($color)); ?>
 
         <div class="tints" style="background: #<?php echo $color; ?>">
              <header class="tints__header">
+                <p class="tints__p">
+                    <strong><?php echo $key; ?></strong>
+                </p>
+
                 <p class="tints__p">#<?php echo $color; ?></p>
                 <p class="tints__p">RGB <?php echo $rgb; ?></p>
                 <p class="tints__p">CMYK <?php echo $cmyk; ?></p>
