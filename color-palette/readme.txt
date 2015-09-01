@@ -10,7 +10,7 @@ This WordPress plugin adds color palettes to your branding and style guide pages
 
 == Description ==
 
-This WordPress plugin adds color palettes to your branding and style guide pages via a series of shortcodes.  You can set up your color palettes in the WordPress admin under Settings > Color Palette.
+This WordPress plugin adds color palettes to your branding and style guide pages via a series of shortcodes.  You can set up your color palettes in the WordPress admin under Settings > Color Palette and then add the shortcodes for each palette to your site's pages.
 
 The [primarycolors] shortcode adds a block that will display all of your brand's primary colors.
 
