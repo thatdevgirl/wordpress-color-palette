@@ -9,10 +9,12 @@
     ?>
 
     <?php foreach ($accentColors as $key => $color): ?>
-        <?php $rgb = implode(', ', hex2rgb($color)); ?>
+        <?php $rgb_arr = hex2rgb($color); ?>
+
+        <?php $rgb  = implode(', ', $rgb_arr); ?>
         <?php $cmyk = implode(', ', hex2cmyk($color)); ?>
 
-        <div class="tints" style="background: #<?php echo $color; ?>">
+        <div class="tints <?php if (isDark($rgb_arr)): ?>tints--dark<?php endif; ?>" style="background: #<?php echo $color; ?>">
              <header class="tints__header">
                 <p class="tints__p">
                     <strong><?php echo $key; ?></strong>
