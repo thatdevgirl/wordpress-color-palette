@@ -1,4 +1,4 @@
-<section class="primary-colors">
+<section class="colors__section">
     <h3>Primary Palette</h3>
 
     <?php foreach ($primaryColors as $color): ?>

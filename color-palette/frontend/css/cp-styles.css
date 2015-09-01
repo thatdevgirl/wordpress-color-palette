@@ -1,3 +1,17 @@
+/* ----------------------------------
+ * General styles for color sections
+ * ---------------------------------- */
+
+.colors__section {
+    display: inline-block;
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+/* ----------------------------------
+ * Individual primary color blocks
+ * ---------------------------------- */
+
 .primary-color {
     float: left;
     margin-top: 3em;
@@ -16,9 +30,24 @@
     width: 150px;
 }
 
-.tints__p {
+/* ----------------------------------
+ * Individual aux color blocks
+ * ---------------------------------- */
+
+.tints {
+    float: left;
+    margin: 1em 1em 0;
+    width: 30em;
+}
+
+.tints__div {
     margin: 0;
     padding: 0.5em 1em;
+    text-align: center;
+}
+
+.tints__p {
+    margin: 0;
 }
 
 .tints__td {
@@ -27,4 +56,5 @@
 
 .tints__table {
     background: #fff;
+    margin: 0;
 }
