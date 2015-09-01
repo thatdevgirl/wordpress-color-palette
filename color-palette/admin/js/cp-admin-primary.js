@@ -13,6 +13,8 @@ var cpAdmin = {
 
         // Set up delete click event.
         this.setDelEvents();
+
+        console.log('in init');
     },
 
     cloneFormRow: function() {
@@ -38,7 +40,7 @@ var cpAdmin = {
     addEvent: function(context) {
         // Get parent node information.
         var parent    = context.parentNode;
-        var container = parent.getElementsByTagName('div')[0];
+        var container = parent.getElementsByClassName('cp-input-block')[0];
 
         var id   = parent.getAttribute('id');
         var name = parent.getAttribute('data-name');
@@ -47,10 +49,20 @@ var cpAdmin = {
         var count = this.colorTypes[id].getElementsByClassName('cp-colors').length;
 
         // Set up the new row.
-        var clone = this.clone.cloneNode(true);
-        clone.getElementsByTagName('input')[0].setAttribute('name', name + '[' + count + ']');
+        var clone = document.createElement('div');
+        clone.classList.add('cp-colors');
+        clone.innerHTML = this.clone.innerHTML;
 
-        container.innerHTML += clone.innerHTML;
+        // Set the name for the name input field.
+        var inputForName = clone.getElementsByClassName('new-input-name')[0];
+        inputForName.setAttribute('name', name + 'Names[' + count + ']');
+
+        // Set the name for the hex input field.
+        var inputForHex = clone.getElementsByClassName('new-input-hex')[0];
+        inputForHex.setAttribute('name', name + '[' + count + ']');
+
+        // Add the cloned row to the container.
+        container.appendChild(clone);
     },
 
     setDelEvents: function() {

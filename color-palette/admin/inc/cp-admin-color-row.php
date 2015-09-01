@@ -3,7 +3,7 @@
 function insertColorRow($arr, $id, $fieldName) {
     ?>
     <section id="<?php echo $id; ?>" data-name="<?php echo $fieldName; ?>">
-        <div>
+        <div class="cp-input-block">
             <?php if ($arr): ?>
                 <?php $i = 0; ?>
 
