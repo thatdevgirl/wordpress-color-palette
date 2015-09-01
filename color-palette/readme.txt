@@ -1,10 +1,12 @@
 === Color Palette ===
 Contributors: thatdevgirl
 Tags: colors, branding, palette
-License: The MIT License
-Author URI: http://www.jhalabi.com
-Plugin URI: http://www.thatdevgirl.com/color-palette/
+Author URI: http://www.thatdevgirl.com
+Requires at least: 3.0.1
 Tested up to: 4.3
+Stable tag: 4.3
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This WordPress plugin adds color palettes to your branding and style guide pages.
 
@@ -19,6 +21,12 @@ The [accentcolors] shortcode adds a block that will display all of your brand's 
 == Installation ==
 
 Upload the plugin to your WordPress installation and activate it.
+
+== Screenshots ==
+
+1. Example screenshot of the admin screen, where a content creator can set up the site's primary and accent palettes.  The admin screen can be found in Settings > Color Palette.
+
+2. Example screenshot of a page containing the [primarycolors] and [accentcolors] shortcodes.
 
 == Changelog ==
 

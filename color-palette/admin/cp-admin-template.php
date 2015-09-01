@@ -17,7 +17,7 @@
     
     <?php insertColorRow($accentColors, 'cp-accent', 'accentColors'); ?>
 
-    <input type="submit" value="Create Palette" class="cp--button cp__input--submit" />
+    <input type="submit" value="Save Palette" class="cp--button cp__input--submit" />
 </form>
 
 <?php require('inc/cp-admin-color-row-template.php'); ?>
