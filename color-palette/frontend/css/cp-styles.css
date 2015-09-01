@@ -40,21 +40,21 @@
     width: 30em;
 }
 
-.tints__div {
+.tints__header {
     margin: 0;
     padding: 0.5em 1em;
     text-align: center;
+}
+
+.tints__div {
+    background: #fff; 
 }
 
 .tints__p {
     margin: 0;
 }
 
-.tints__td {
-    padding: 0.5em 1em;
-}
-
-.tints__table {
-    background: #fff;
+.tints__p--tint {
     margin: 0;
+    padding: 0.5em;
 }
