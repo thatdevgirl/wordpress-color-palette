@@ -3,8 +3,8 @@ Contributors: thatdevgirl
 Tags: colors, branding, palette
 Donate Link: https://www.paypal.me/thatdevgirl
 Requires at least: 3.0.1
-Tested up to: 4.5.1
-Stable tag: 1.0
+Tested up to: 4.7.1
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +20,8 @@ The **[accentcolors]** shortcode adds a block that will display all of your bran
 
 == Installation ==
 
+Please note: This plugin requires PHP 5.4 or greater to run.
+
 1. Upload the plugin to your WordPress installation and activate it.
 
 == Screenshots ==
@@ -29,6 +31,10 @@ The **[accentcolors]** shortcode adds a block that will display all of your bran
 2. Example screenshot of a page containing the [primarycolors] and [accentcolors] shortcodes.
 
 == Changelog ==
+
+= 1.1 =
+* Tested plugin on v4.7.1.
+* Added a check to make sure user has PHP 5.4 or greater.
 
 = 1.0 =
 * Initial release.

@@ -10,6 +10,8 @@ Description
 
 This WordPress plugin adds color palettes to your branding and style guide pages via a series of shortcodes.  You can set up your color palettes in the WordPress admin under Settings > Color Palette and then add the shortcodes for each palette to your site's pages.
 
+Please note that this plugin requires PHP 5.4 or greater to run.
+
 What are the shortcodes?
 --------------------
 
