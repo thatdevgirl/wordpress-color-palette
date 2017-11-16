@@ -3,8 +3,8 @@ Contributors: thatdevgirl
 Tags: colors, branding, palette
 Donate Link: https://www.paypal.me/thatdevgirl
 Requires at least: 3.0.1
-Tested up to: 4.7.1
-Stable tag: 1.1
+Tested up to: 4.9
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,14 @@ Please note: This plugin requires PHP 5.4 or greater to run.
 2. Example screenshot of a page containing the [primarycolors] and [accentcolors] shortcodes.
 
 == Changelog ==
+
+= 1.2 =
+* Tested plugin on v4.9.
+* Updated code style to better adhere to WordPress code standards.
+* Updated HTML to be WCAG AA compliant.
+* Minor UI updates.
+* Finally managing CSS through SCSS.
+* Minifying CSS and JS files.
 
 = 1.1 =
 * Tested plugin on v4.7.1.
