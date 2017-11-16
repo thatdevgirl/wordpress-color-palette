@@ -4,7 +4,7 @@ Tags: colors, branding, palette
 Donate Link: https://www.paypal.me/thatdevgirl
 Requires at least: 3.0.1
 Tested up to: 4.9
-Stable tag: 1.2
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,11 +32,12 @@ Please note: This plugin requires PHP 5.4 or greater to run.
 
 == Changelog ==
 
-= 1.2 =
+= 2.0 =
 * Tested plugin on v4.9.
 * Updated code style to better adhere to WordPress code standards.
 * Updated HTML to be WCAG AA compliant.
 * Minor UI updates.
+* Refactoring the CSS. This involved a pretty substantial reworking of class names. Please check any custom styles you may have created!
 * Finally managing CSS through SCSS.
 * Minifying CSS and JS files.
 
