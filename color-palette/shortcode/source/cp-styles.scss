@@ -1,11 +1,11 @@
-/* ---
+/**
  * Colors
  */
 
 $black: #000;
 $white: #fff;
 
-/* ---
+/**
  * General styles for color sections
  */
 
@@ -14,7 +14,7 @@ $white: #fff;
   margin-bottom: 2rem;
 }
 
-/* ---
+/**
  * Primary color blocks
  */
 
@@ -37,9 +37,9 @@ $white: #fff;
   }
 }
 
-/* ----------------------------------
+/**
  * Accent color blocks
- * ---------------------------------- */
+ */
 
 .accent-colors {
   color: $black;

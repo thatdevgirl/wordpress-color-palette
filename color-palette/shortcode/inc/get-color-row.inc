@@ -1,6 +1,6 @@
 <?php
 
-function insertColorRow($arr, $id, $fieldName) {
+function getColorRow( $arr, $id, $fieldName ) {
   ?>
   <section id="<?php echo $id; ?>" data-name="<?php echo $fieldName; ?>">
     <div class="cp-input-block">

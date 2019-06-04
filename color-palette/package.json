@@ -1,0 +1,26 @@
+{
+  "name": "color-palette",
+  "version": "1.0.0",
+  "description": "Build scripts for the WordPress Color Palette plugin",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joni Halabi",
+  "license": "MIT",
+
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-minify": "^0.3.0",
+    "gulp": "latest",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "latest",
+    "gulp-concat": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-watch": "latest",
+    "jquery": "latest"
+  }
+}

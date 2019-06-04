@@ -1,10 +1,10 @@
 === Color Palette ===
 Contributors: thatdevgirl
-Tags: colors, branding, palette
+Tags: colors, branding, palette, visual identity
 Donate Link: https://www.paypal.me/thatdevgirl
 Requires at least: 3.0.1
-Tested up to: 4.9
-Stable tag: 2.0
+Tested up to: 5.2.1
+Stable tag: 3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,8 +20,6 @@ The **[accentcolors]** shortcode adds a block that will display all of your bran
 
 == Installation ==
 
-Please note: This plugin requires PHP 5.4 or greater to run.
-
 1. Upload the plugin to your WordPress installation and activate it.
 
 == Screenshots ==
@@ -31,6 +29,11 @@ Please note: This plugin requires PHP 5.4 or greater to run.
 2. Example screenshot of a page containing the [primarycolors] and [accentcolors] shortcodes.
 
 == Changelog ==
+
+= 3.0 =
+* Major code refactor!
+* New Feature! Gutenberg block to create custom color palettes within the post editor.
+* Still supporting the options page / shortcode functionality, but I do plan to deprecate it at some point.
 
 = 2.0 =
 * Tested plugin on v4.9.

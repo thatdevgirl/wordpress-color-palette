@@ -4,17 +4,17 @@
  * Convert Hex color value to RBG.
  */
 function hex2rgb( $hex ) {
- if ( strlen( $hex ) == 3 ) {
-  $red   = hexdec( substr( $hex, 0, 1 ).substr( $hex, 0, 1 ) );
-  $green = hexdec( substr( $hex, 1, 1 ).substr( $hex, 1, 1 ) );
-  $blue  = hexdec( substr( $hex, 2, 1 ).substr( $hex, 2, 1 ) );
- } else {
-  $red   = hexdec( substr( $hex, 0, 2 ) );
-  $green = hexdec( substr( $hex, 2, 2 ) );
-  $blue  = hexdec( substr( $hex, 4, 2 ) );
- }
+  if ( strlen( $hex ) == 3 ) {
+    $red   = hexdec( substr( $hex, 0, 1 ).substr( $hex, 0, 1 ) );
+    $green = hexdec( substr( $hex, 1, 1 ).substr( $hex, 1, 1 ) );
+    $blue  = hexdec( substr( $hex, 2, 1 ).substr( $hex, 2, 1 ) );
+  } else {
+    $red   = hexdec( substr( $hex, 0, 2 ) );
+    $green = hexdec( substr( $hex, 2, 2 ) );
+    $blue  = hexdec( substr( $hex, 4, 2 ) );
+  }
 
- return array( $red, $green, $blue );
+  return array( $red, $green, $blue );
 }
 
 /**
