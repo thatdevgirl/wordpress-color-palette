@@ -28,7 +28,7 @@ function getColorRow( $arr, $id, $fieldName ) {
                 required>
             </label>
 
-            <a href="#" class="cp-del">x</a>
+            <button class="cp-del">x</button>
           </div>
 
           <?php $i++; ?>
@@ -36,7 +36,7 @@ function getColorRow( $arr, $id, $fieldName ) {
       <?php endif; ?>
     </div>
 
-    <a href="#" class="cp-btn cp-add">Add Color</a>
+    <button class="cp-btn cp-add">Add Color</button>
   </section>
 
   <?php

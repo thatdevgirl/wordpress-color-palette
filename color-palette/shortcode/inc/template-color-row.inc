@@ -19,5 +19,5 @@
       required>
   </label>
 
-  <a href="#" class="cp-del">x</a>
+  <button class="cp-del">x</button>
 </div>
