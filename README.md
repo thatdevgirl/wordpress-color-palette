@@ -1,14 +1,17 @@
 # WordPress Color Palette
 
-__Author:__ Joni Halabi (www.thatdevgirl.com)
-
-__License:__ GPLv2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
+__Author:__ Joni Halabi (https://thatdevgirl.com)
+__License:__ GPL2
 
 ## Description
 
-This WordPress plugin adds color palettes to your branding and style guide pages via a series of shortcodes.  You can set up your color palettes in the WordPress admin under Settings > Color Palette and then add the shortcodes for each palette to your site's pages.
+This WordPress plugin adds a color palette block to the post editor, to be used for branding and style guide pages.
 
-## What are the shortcodes?
+### Deprecation coming
+
+The previous version of this plugin added primary and secondary color palettes via a series of shortcodes.  This version is still supported and palettes can be set up in the WordPress admin under Settings > Color Palette and then added to posts via short codes:
 
 * `[primarycolors]`: This shortcode adds a block that will display all of your brand's primary colors.
 * `[accentcolors]`: This shortcode adds a block that will display all of your brand's accent colors.  These can be colors that compliment your primary colors, for example.
+
+This functionality will be deprecated in a future version.

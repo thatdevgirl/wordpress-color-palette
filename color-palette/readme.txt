@@ -1,31 +1,35 @@
 === Color Palette ===
 Contributors: thatdevgirl
-Tags: colors, branding, palette, visual identity
 Donate Link: https://www.paypal.me/thatdevgirl
-Requires at least: 3.0.1
+Tags: colors, branding, palette, visual identity
+Requires at least: 5.0
 Tested up to: 5.2.1
 Stable tag: 3.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This WordPress plugin adds color palettes to your branding and style guide pages.
+Add a color palette block to pages in the post editor.
 
 == Description ==
 
-This WordPress plugin adds color palettes to your branding and style guide pages via a series of shortcodes.  You can set up your color palettes in the WordPress admin under Settings > Color Palette and then add the shortcodes for each palette to your site's pages.
+This WordPress plugin adds a color palette block to the post editor, to be used for branding and style guide pages.
 
-The **[primarycolors]** shortcode adds a block that will display all of your brand's primary colors.
+= Deprecation coming =
 
-The **[accentcolors]** shortcode adds a block that will display all of your brand's accent colors.  These can be colors that compliment your primary colors, for example.
+The previous version of this plugin added primary and secondary color palettes via a series of shortcodes.  This version is still supported and palettes can be set up in the WordPress admin under Settings > Color Palette and then added to posts via short codes:
+
+* **[primarycolors]**: This shortcode adds a block that will display all of your brand's primary colors.
+* **[accentcolors]**: This shortcode adds a block that will display all of your brand's accent colors.  These can be colors that compliment your primary colors, for example.
+
+This functionality will be deprecated in a future version.
 
 == Installation ==
 
-1. Upload the plugin to your WordPress installation and activate it.
+1. Upload the plugin to your WordPress installation.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
+3. Edit any page or post and look for the 'Color Palette' block in the block library.
 
 == Screenshots ==
 
 1. Example screenshot of the admin screen, where a content creator can set up the site's primary and accent palettes.  The admin screen can be found in Settings > Color Palette.
-
 2. Example screenshot of a page containing the [primarycolors] and [accentcolors] shortcodes.
 
 == Changelog ==
@@ -33,7 +37,7 @@ The **[accentcolors]** shortcode adds a block that will display all of your bran
 = 3.0 =
 * Major code refactor!
 * New Feature! Gutenberg block to create custom color palettes within the post editor.
-* Still supporting the options page / shortcode functionality, but I do plan to deprecate it at some point.
+* Still supporting the options page / shortcode functionality, but there are plans to deprecate it in a future release.
 
 = 2.0 =
 * Tested plugin on v4.9.
@@ -50,3 +54,8 @@ The **[accentcolors]** shortcode adds a block that will display all of your bran
 
 = 1.0 =
 * Initial release.
+
+== Upgrade Notice ==
+
+= 3.0 =
+Major code refactor to add the 'Color Palette' block to the editor. Please note that the settings page and shortcodes are no longer recommended and will be deprecated in a future version.

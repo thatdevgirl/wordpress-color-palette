@@ -2,12 +2,12 @@
 
 /**
  * Plugin Name: Color Palette
- * Description: This WordPress plugin creates a custom color palette section that you can add to any page (i.e. in a style guide).
+ * Description: This WordPress plugin adds a color palette block to the post editor, to be used for branding and style guide pages.
  * Version: 3.0
  * Author: Joni Halabi
- * Author URI: https://www.thatdevgirl.com
- * License: GPLv2 or later
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Author URI: https://thatdevgirl.com
+ * License: GPL2
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
 
 // [DEPRECATED] Shortcode functionality.
