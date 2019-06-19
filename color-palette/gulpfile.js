@@ -1,25 +1,28 @@
 const gulp = require( 'gulp' ),
       babel = require( 'gulp-babel' )
+      browserify = require( 'browserify' ),
+      buffer = require( 'vinyl-buffer' ),
       clean = require( 'gulp-clean-css' ),
-      concat = require( 'gulp-concat' ),
       rename = require( 'gulp-rename' ),
       sass = require( 'gulp-sass' ),
-      uglify = require( 'gulp-uglify' ),
-      watch = require( 'gulp-watch' );
+      source = require( 'vinyl-source-stream' ),
+      uglify = require( 'gulp-uglify' );
 
 // Array of JS files, in order by dependency.
 const jsFiles = [
+  'source/block/color-palette/index.js',
   'shortcode/source/cp-admin.js'
 ];
 
 // JS build task.
 gulp.task( 'js', () => {
-  return gulp.src( jsFiles )
-    .pipe( babel( {
-      presets: ['minify', 'es2015']
-    } ) )
-    .pipe( concat( 'cp-admin.min.js' ) )
-    .pipe( gulp.dest( 'shortcode/build' ) );
+  return browserify( { entries: jsFiles } )
+    .transform( 'babelify', { presets: ['es2015', 'react'] } )
+    .bundle()
+    .pipe( source( 'color-palette.min.js' ) )
+    .pipe( buffer() )
+    .pipe( uglify() )
+    .pipe( gulp.dest( 'build' ) );
 } );
 
 // CSS build task.

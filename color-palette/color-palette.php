@@ -11,6 +11,7 @@
 */
 
 require_once( 'inc/set-plugin-meta.inc' );
+require_once( 'inc/set-assets.inc' );
 
 // [DEPRECATED] Shortcode functionality.
 require_once( 'shortcode/index.php' );

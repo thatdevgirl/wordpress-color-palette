@@ -18,7 +18,8 @@ var cpAdmin = {
   cloneFormRow: function() {
     // Get the block and create the clone.
     let block = document.getElementsByClassName('template')[0];
-    return block.cloneNode(true);
+
+    return ( block ) ? block.cloneNode(true) : false;
   },
 
   setAddEvent: function() {
