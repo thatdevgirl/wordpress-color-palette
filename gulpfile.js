@@ -10,8 +10,8 @@ const gulp = require( 'gulp' ),
 
 // Array of JS files, in order by dependency.
 const jsFiles = [
-  'source/block/color-palette/index.js',
-  'shortcode/source/cp-admin.js'
+  'color-palette/source/block/color-palette/index.js',
+  'color-palette/shortcode/source/cp-admin.js'
 ];
 
 // JS build task.
@@ -22,25 +22,25 @@ gulp.task( 'js', () => {
     .pipe( source( 'color-palette.min.js' ) )
     .pipe( buffer() )
     .pipe( uglify() )
-    .pipe( gulp.dest( 'build' ) );
+    .pipe( gulp.dest( 'color-palette/build' ) );
 } );
 
 // CSS build task.
 gulp.task( 'css', () => {
-  return gulp.src( 'shortcode/source/cp-styles.scss' )
+  return gulp.src( 'color-palette/shortcode/source/cp-styles.scss' )
     .pipe( sass().on( 'error', sass.logError ) )
     .pipe( clean() )
     .pipe( rename( {suffix: '.min'} ) )
-    .pipe( gulp.dest( 'shortcode/build' ) );
+    .pipe( gulp.dest( 'color-palette/shortcode/build' ) );
 } );
 
 // Admin CSS build task.
 gulp.task( 'admincss', () => {
-  return gulp.src( 'shortcode/source/cp-admin.scss' )
+  return gulp.src( 'color-palette/shortcode/source/cp-admin.scss' )
     .pipe( sass().on( 'error', sass.logError ) )
     .pipe( clean() )
     .pipe( rename( {suffix: '.min'} ) )
-    .pipe( gulp.dest( 'shortcode/build' ) );
+    .pipe( gulp.dest( 'color-palette/shortcode/build' ) );
 } );
 
 // Default task.

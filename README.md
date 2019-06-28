@@ -1,13 +1,8 @@
 # WordPress Color Palette
 
-__Author:__ Joni Halabi (https://thatdevgirl.com)
-__License:__ GPL2
-
-## Description
-
 This WordPress plugin adds a color palette block to the post editor, to be used for branding and style guide pages.
 
-### Deprecation coming
+## Deprecation coming
 
 The previous version of this plugin added primary and secondary color palettes via a series of shortcodes.  This version is still supported and palettes can be set up in the WordPress admin under Settings > Color Palette and then added to posts via short codes:
 
