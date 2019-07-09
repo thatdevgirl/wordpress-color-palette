@@ -1,18 +1,35 @@
 <?php
+
 /**
- * Enqueue JS and CSS assets.
+ * Enqueue editor JS assets.
  */
 
 add_action( 'enqueue_block_editor_assets', 'cp_enqueue_assets' );
 
 function cp_enqueue_assets() {
-  $editorJS = '../build/color-palette.min.js';
+  $editorJs = '../build/color-palette.min.js';
 
-  // Block Javascript.
   wp_enqueue_script(
-    'cp-editor-blocks-js',
-    plugins_url( $editorJS, __FILE__ ),
+    'cp-editor-js',
+    plugins_url( $editorJs, __FILE__ ),
     array( 'wp-blocks', 'wp-editor', 'wp-components' ),
-    filemtime( plugin_dir_path( __FILE__ ) . $editorJS )
+    filemtime( plugin_dir_path( __FILE__ ) . $editorJs )
+  );
+}
+
+/**
+ * Enqueue front-end CSS assets.
+ */
+
+add_action( 'wp_enqueue_scripts', 'cp_enqueue_styles' );
+
+function cp_enqueue_styles() {
+  $frontEndCss= '../build/color-palette.min.css';
+
+  wp_enqueue_style(
+    'cp-frontend-styles',
+    plugin_dir_url( __FILE__ ) . $frontEndCss,
+    array(),
+    filemtime( plugin_dir_path( __FILE__ ) . $frontEndCss )
   );
 }

@@ -27,11 +27,11 @@ gulp.task( 'js', () => {
 
 // CSS build task.
 gulp.task( 'css', () => {
-  return gulp.src( 'color-palette/shortcode/source/cp-styles.scss' )
+  return gulp.src( 'color-palette/source/scss/color-palette.scss' )
     .pipe( sass().on( 'error', sass.logError ) )
     .pipe( clean() )
     .pipe( rename( {suffix: '.min'} ) )
-    .pipe( gulp.dest( 'color-palette/shortcode/build' ) );
+    .pipe( gulp.dest( 'color-palette/build' ) );
 } );
 
 // Admin CSS build task.
