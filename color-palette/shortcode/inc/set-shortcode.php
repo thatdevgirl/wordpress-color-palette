@@ -1,7 +1,7 @@
 <?php
 
 function cp_add_styles() {
-  wp_enqueue_style( 'cp-styles', plugin_dir_url( __FILE__ ) . 'build/cp-styles.min.css' );
+  wp_enqueue_style( 'cp-styles', plugin_dir_url( __FILE__ ) . '../build/cp-styles.min.css' );
 }
 
 function cp_primary_shortcode() {

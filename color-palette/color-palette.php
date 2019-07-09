@@ -10,8 +10,9 @@
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
 
-require_once( 'inc/set-plugin-meta.inc' );
-require_once( 'inc/set-assets.inc' );
+require_once( 'inc/set-plugin-meta.inc.php' );
+require_once( 'inc/set-assets.inc.php' );
+require_once( 'inc/register-color.inc.php' );
 
 // [DEPRECATED] Shortcode functionality.
 require_once( 'shortcode/index.php' );

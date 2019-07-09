@@ -10,7 +10,7 @@ const gulp = require( 'gulp' ),
 
 // Array of JS files, in order by dependency.
 const jsFiles = [
-  'color-palette/source/block/color-palette/index.js',
+  'color-palette/source/block/color/index.js',
   'color-palette/shortcode/source/cp-admin.js'
 ];
 
