@@ -4,6 +4,8 @@
  * Convert Hex color value to RBG.
  */
 function hex2rgb( $hex ) {
+  $hex = str_replace( '#', '', $hex );
+
   if ( strlen( $hex ) == 3 ) {
     $red   = hexdec( substr( $hex, 0, 1 ).substr( $hex, 0, 1 ) );
     $green = hexdec( substr( $hex, 1, 1 ).substr( $hex, 1, 1 ) );
@@ -21,6 +23,8 @@ function hex2rgb( $hex ) {
  * Convert Hex color value to CMYK.
  */
 function hex2cmyk( $hex ) {
+  $hex = str_replace( '#', '', $hex );
+
   // Convert to RGB first.
   $rgb = hex2rgb( $hex );
 
