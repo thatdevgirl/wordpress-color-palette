@@ -1,4 +1,6 @@
-<section class="cp-palette" aria-labelledby="cp-primary-header">
+<?php require_once( '../../inc/utils.php' ); ?>
+
+<div class="cp-palette">
   <div class="cp-colors">
     <?php
       /* Iterate over the primaryColors associative array.
@@ -12,10 +14,10 @@
 
         <p class="cp-color-name"><?php print $key; ?></p>
         <p>#<?php print $color; ?></p>
-        <p><?php print hex2rgb( $color ); ?></p>
-        <p><?php print hex2cmyk( $color ); ?></p>
+        <p>RGB:  <?php print implode( ', ', hex2rgb( $color ) ); ?></p>
+        <p>CMYK: <?php print implode( ', ', hex2cmyk( $color ) ); ?></p>
       </div>
     <?php endforeach; ?>
 
   </div>
-</section>
+</div>

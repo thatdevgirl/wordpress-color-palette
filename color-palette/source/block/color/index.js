@@ -8,8 +8,6 @@ import colorEdit from './edit.js';
 import colorIcons from './icons.js';
 
 ( function() {
-  console.log('foo');
-
   const { registerBlockType } = wp.blocks;
 
   registerBlockType( 'tdg/color', {

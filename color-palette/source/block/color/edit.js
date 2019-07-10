@@ -2,7 +2,7 @@
  * EDIT: Color
  */
 
-const { PanelBody, TextControl } = wp.components;
+const { ColorPicker, PanelBody, TextControl } = wp.components;
 const { InspectorControls } = wp.editor;
 const { Fragment } = wp.element;
 
@@ -12,8 +12,10 @@ let colorPaletteEdit = ( props ) => {
   const { hex, label } = props.attributes;
 
   // Declare change event handlers.
-  const onChangeHex   = ( value ) => { setAttributes( { hex: value } ) };
+  const onChangeHex   = ( value ) => { setAttributes( { hex: value.hex } ) };
   const onChangeLabel = ( value ) => { setAttributes( { label: value } ) };
+
+  const swatchStyle = { background: hex };
 
   // Return the edit UI.
   return (
@@ -22,21 +24,29 @@ let colorPaletteEdit = ( props ) => {
         <InspectorControls>
           <PanelBody title='Color'>
 
-            <TextControl
-              label='Color hex value'
-              value={ hex }
-              onChange={ onChangeHex }
-            />
-
-            <TextControl
-              label='Color label'
-              value={ label }
-              onChange={ onChangeLabel }
-            />
+          <ColorPicker
+            color={ hex }
+            onChangeComplete={ onChangeHex }
+            disableAlpha
+          />
 
           </PanelBody>
         </InspectorControls>
       ) }
+
+      <div className='cp-color'>
+        <div className='swatch' style={ swatchStyle }></div>
+
+        <p className="cp-color-name">
+          <TextControl
+            placeholder='Color label'
+            value={ label }
+            onChange={ onChangeLabel }
+          />
+        </p>
+
+        <p>{ hex }</p>
+      </div>
     </Fragment>
   );
 }

@@ -4,12 +4,6 @@
  * Convert Hex color value to RBG.
  */
 function hex2rgb( $hex ) {
-  $rgb = getRgb( $hex );
-
-  return 'R' . $rgb[0] . ' G' . $rgb[1] . ' B' . $rgb[2];
-}
-
-function getRgb( $hex ) {
   if ( strlen( $hex ) == 3 ) {
     $red   = hexdec( substr( $hex, 0, 1 ).substr( $hex, 0, 1 ) );
     $green = hexdec( substr( $hex, 1, 1 ).substr( $hex, 1, 1 ) );
@@ -28,7 +22,7 @@ function getRgb( $hex ) {
  */
 function hex2cmyk( $hex ) {
   // Convert to RGB first.
-  $rgb = getRgb( $hex );
+  $rgb = hex2rgb( $hex );
 
   // Get RGB values from array
   $r = $rgb['0'];
@@ -47,5 +41,5 @@ function hex2cmyk( $hex ) {
   $yellow  = ( $black != 1 ) ? round( @( ($yellow  - $black) / (1 - $black)) * 100, 0 ) : 0;
   $black   = round( $black * 100, 0 );
 
-  return 'C' . $cyan . ' M' . $magenta . ' Y' . $yellow . ' K' . $black;
+  return array( $cyan, $magenta, $yellow, $black );
 }
