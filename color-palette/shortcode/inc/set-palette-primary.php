@@ -1,21 +1,21 @@
-<section class="section-palette" aria-label="Block of primary colors">
-  <h2>Primary Color Palette</h2>
+<section class="cp-palette" aria-labelledby="cp-primary-header">
+  <div class="cp-colors">
+    <?php
+      /* Iterate over the primaryColors associative array.
+       * Key is the color name. Value is the color hex.
+       */
+    ?>
 
-  <?php
-    /* Iterate over the primaryColors associative array.
-     * Key is the color name. Value is the color hex.
-     */
-  ?>
+    <?php foreach ($primaryColors as $key => $color): ?>
+      <div class="cp-color">
+        <div class="swatch" style="background: #<?php print $color; ?> "></div>
 
-  <?php foreach ($primaryColors as $key => $color): ?>
-    <div class="primary-color">
-      <div class="swatch" style="background: #<?php echo $color; ?> "></div>
+        <p class="cp-color-name"><?php print $key; ?></p>
+        <p>#<?php print $color; ?></p>
+        <p><?php print hex2rgb( $color ); ?></p>
+        <p><?php print hex2cmyk( $color ); ?></p>
+      </div>
+    <?php endforeach; ?>
 
-      <p><strong><?php echo $key; ?></strong></p>
-
-      <p>#<?php echo $color; ?></p>
-      <p>RBG: <?php echo implode(', ', hex2rgb($color)); ?></p>
-      <p>CMYK: <?php echo implode(', ', hex2cmyk($color)); ?></p>
-    </div>
-  <?php endforeach; ?>
+  </div>
 </section>

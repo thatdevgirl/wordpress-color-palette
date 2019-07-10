@@ -4,6 +4,12 @@
  * Convert Hex color value to RBG.
  */
 function hex2rgb( $hex ) {
+  $rgb = getRgb( $hex );
+
+  return 'R' . $rgb[0] . ' G' . $rgb[1] . ' B' . $rgb[2];
+}
+
+function getRgb( $hex ) {
   if ( strlen( $hex ) == 3 ) {
     $red   = hexdec( substr( $hex, 0, 1 ).substr( $hex, 0, 1 ) );
     $green = hexdec( substr( $hex, 1, 1 ).substr( $hex, 1, 1 ) );
@@ -22,7 +28,7 @@ function hex2rgb( $hex ) {
  */
 function hex2cmyk( $hex ) {
   // Convert to RGB first.
-  $rgb = hex2rgb( $hex );
+  $rgb = getRgb( $hex );
 
   // Get RGB values from array
   $r = $rgb['0'];
@@ -36,27 +42,10 @@ function hex2cmyk( $hex ) {
 
   $black  = min( $cyan, $magenta, $yellow );
 
-  $cyan    = round( @( ($cyan    - $black) / (1 - $black)) * 100, 2 );
-  $magenta = round( @( ($magenta - $black) / (1 - $black)) * 100, 2 );
-  $yellow  = round( @( ($yellow  - $black) / (1 - $black)) * 100, 2 );
-  $black   = round( $black * 100, 2 );
+  $cyan    = ( $black != 1 ) ? round( @( ($cyan    - $black) / (1 - $black)) * 100, 0 ) : 0;
+  $magenta = ( $black != 1 ) ? round( @( ($magenta - $black) / (1 - $black)) * 100, 0 ) : 0;
+  $yellow  = ( $black != 1 ) ? round( @( ($yellow  - $black) / (1 - $black)) * 100, 0 ) : 0;
+  $black   = round( $black * 100, 0 );
 
-  return array( $cyan, $magenta, $yellow, $black );
-}
-
-/**
- * Determine brightness of a color based on RBG.
- *   - Required parameter is an array of RGB values: 0 = R, 1 = G, 2 = B.
- *   - Formula is from W3C standards: ((RED x 299) + (GREEN x 587) + (BLUE x 114)) / 1000
- *   - Brightness threshold is 125.
- *   - http://www.w3.org/TR/AERT (Checkpoint 2.2)
- */
-function isDark( $rgb ) {
-   $red   = $rgb[0];
-   $green = $rgb[1];
-   $blue  = $rgb[2];
-
-   $brightness = ( ( $red * 299 ) + ( $green * 587 ) + ( $blue * 114 ) ) / 1000;
-
-   return ( $brightness > 125 ) ? false : true;
+  return 'C' . $cyan . ' M' . $magenta . ' Y' . $yellow . ' K' . $black;
 }
