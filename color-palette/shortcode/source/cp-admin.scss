@@ -1,0 +1,74 @@
+/**
+ * Admin-only styles for the Color Palette settings page.
+ * [ TO BE DEPRECATED ]
+ */
+
+// Colors
+$white: #fff;
+$red: #c00;
+
+.color-palette {
+
+  padding-top: 1rem;
+
+  strong {
+    color: darken( $red, 10% );
+    font-size: 0.9rem;
+  }
+
+  // Color row template.
+  .template {
+    display: none;
+  }
+
+  // Color row delete button.
+  .cp-del {
+    background: $red;
+    border: 0;
+    border-radius: 0.75rem;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    height: 1.5rem;
+    line-height: 1.7;
+    padding: 0;
+    text-align: center;
+    width: 1.5rem;
+
+    &:hover, &:focus, &:active {
+      background: lighten( $red, 10% );
+    }
+  }
+
+  // Color row add button.
+  .cp-add {
+    cursor: pointer;
+    margin: 1rem 0;
+  }
+
+  // Form submit button.
+  .cp-submit {
+    background: $red;
+    border: 0;
+    border-radius: 0.3rem;
+    color: $white;
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 0.5rem 0.8rem;
+
+    &:hover, &:focus, &:active {
+      background: darken( $red, 10% );
+    }
+  }
+
+  // Color row.
+  .cp-colors {
+    margin-bottom: 1rem;
+
+    input {
+      margin-right: 1rem;
+    }
+  }
+
+}
