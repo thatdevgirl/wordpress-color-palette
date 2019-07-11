@@ -5,6 +5,7 @@
  */
 
 import { memoize, times } from 'lodash';
+import colorsIcons from './icons.js';
 
 ( function() {
 
@@ -13,10 +14,10 @@ import { memoize, times } from 'lodash';
 
   registerBlockType( 'tdg/colors', {
     title: 'Color Palette',
-    description: 'Block of related colors, for use in a style guide.',
+    description: 'Group of related color blocks.',
     category: 'widgets',
     keywords: [ 'colors', 'styles', 'visual identity' ],
-    //icon: guCtaDeckIcons.block,
+    icon: colorsIcons.block,
 
     /*
      * Edit UI and functionality.

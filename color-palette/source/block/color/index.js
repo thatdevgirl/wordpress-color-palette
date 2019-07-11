@@ -12,7 +12,7 @@ import colorIcons from './icons.js';
 
   registerBlockType( 'tdg/color', {
     title: 'Color',
-    description: 'Single color for use in the color palette.',
+    description: 'Single color block.',
     category: 'widgets',
     icon: colorIcons.block,
     edit: colorEdit,

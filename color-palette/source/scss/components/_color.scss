@@ -15,12 +15,19 @@
     padding: 25% 50%;
   }
 
-  p {
+  p,
+  .editor-styles-wrapper p {
     font-size: 0.85rem;
     margin: 0 0.25rem 0.5rem;
   }
 
   .cp-color-name {
     font-weight: bold;
+
+    // Editor styles.
+    input.components-text-control__input {
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
   }
 }
