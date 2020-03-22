@@ -3,8 +3,8 @@ Contributors: thatdevgirl
 Donate Link: https://www.paypal.me/thatdevgirl
 Tags: colors, branding, palette, visual identity
 Requires at least: 5.0
-Tested up to: 5.2.1
-Stable tag: 3.0
+Tested up to: 5.4
+Stable tag: 3.1
 
 Add a color palette block to pages in the post editor.
 
@@ -40,6 +40,10 @@ This functionality will be deprecated in a future version.
 2. The color palette block on the front-end.
 
 == Changelog ==
+
+= 3.1 =
+* Tested for compatibility with the upcoming WordPress core 5.4 release.
+* CSS fix to support 5.4.
 
 = 3.0 =
 * Major code refactor!
