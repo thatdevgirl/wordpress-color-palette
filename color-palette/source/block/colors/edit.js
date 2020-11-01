@@ -22,7 +22,7 @@ const ColorsEdit = ( props ) => {
 
   // Template for child cards.
   const getColorsTemplate = memoize( () => {
-    return times( 3, () => [ 'tdg/color' ] );
+    return times( 4, () => [ 'tdg/color' ] );
   } );
 
   // Return the edit UI.
@@ -37,7 +37,7 @@ const ColorsEdit = ( props ) => {
           help="Select how the individual color blocks should be displayed in the palette."
           selected={ style }
           options={ [
-            { label: 'Original card', value: '' },
+            { label: 'Basic card', value: '' },
             { label: 'Stylized card', value: ' stylized-card' },
             { label: 'Circle', value: ' circle' },
           ] }

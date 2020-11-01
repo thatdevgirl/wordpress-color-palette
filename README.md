@@ -1,18 +1,25 @@
 # WordPress Color Palette
 
-This WordPress plugin adds a color palette block to the post editor, to be used for branding and style guide pages.
+This WordPress plugin adds a Color Palette block to the post editor, to be used for branding and style guide pages.
 
-## New post editor blocks!
+## The Color Palette block
 
-You can now take advantage of the new ("Gutenberg") post editor by creating color palettes on the fly using the new "Color Palette" block. The "Color Palette" block starts with 4 "Color" blocks, but you can add additional blocks or remove excess blocks as needed. Give each color block a color using the selector in the Inspector Panel on the right-hand side of the editor and give your color a name. Done!
+The __Color Palette__ block displays a group of colors on your page. The block starts with 4 individual __Color__ blocks, but you can add additional blocks or remove excess blocks as needed.
 
-If you need to use the same color palette on multiple pages or posts, simply save the "Color Palette" block with all of your colors as a reusable block through the editor.
+Give each color block a color using the selector in the Inspector Panel on the right-hand side of the editor, give your color a name, and you're done!
 
-## Deprecation coming
+### What is displayed
 
-The previous version of this plugin added primary and secondary color palettes via a series of shortcodes.  This version is still supported and palettes can be set up in the WordPress admin under Settings > Color Palette and then added to posts via short codes:
+Each color in the palette will display a swatch of the selected color, the given color name, as well as the Hex, RGB, and CMYK values for that color.
 
-* `[primarycolors]`: This shortcode adds a block that will display all of your brand's primary colors.
-* `[accentcolors]`: This shortcode adds a block that will display all of your brand's accent colors.  These can be colors that compliment your primary colors, for example.
+## Palette color block styles
 
-This functionality will be deprecated in a future version.
+You can select the "Color block style" inside the __Color Palette__ block by using the options in the Inspector Panel. The style options include:
+
+* __Basic card:__ Each color is displayed in a rectangular card with minimal additional styles. This option is the easiest to override in your theme styles.
+* __Stylized card:__ Each color is displayed in a rectangular card, just like the basic card, but with a bit more design added to it.
+* __Circle:__ Each color is displayed as a circle of color, with the name and color values centered underneath the circle of color.
+
+## Reusability
+
+If you need to use the same color palette on multiple pages or posts, simply save the __Color Palette__ block with all of your colors as a reusable block via the post editor.
