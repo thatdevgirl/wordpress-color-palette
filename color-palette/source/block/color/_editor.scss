@@ -23,3 +23,25 @@ $gray:  darken( $white, 20% );
     }
   }
 }
+
+
+/**
+ * Stylized card.
+ */
+
+.stylized-card {
+  .block-editor-inner-blocks {
+    .cp-color {
+      p {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+
+      .cp-color-hex {
+        font-size: 1rem;
+        padding-bottom: 1rem;
+        padding-top: 0.5rem;
+      }
+    }
+  }
+}

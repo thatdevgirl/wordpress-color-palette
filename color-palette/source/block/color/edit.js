@@ -37,7 +37,7 @@ const ColorEdit = ( props ) => {
       <div className='cp-color'>
         <div className='swatch' style={ swatchStyle }></div>
 
-        <p className="cp-color-name">
+        <p className='cp-color-name'>
           <TextControl
             placeholder='Color label'
             value={ label }
@@ -45,7 +45,7 @@ const ColorEdit = ( props ) => {
           />
         </p>
 
-        <p>{ hex }</p>
+        <p className='cp-color-hex'>{ hex }</p>
       </div>
 
     </Fragment>

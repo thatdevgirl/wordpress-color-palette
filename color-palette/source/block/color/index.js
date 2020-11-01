@@ -16,7 +16,8 @@ const Color = ( () => {
     description: 'Single color block.',
     category: 'widgets',
     icon: ColorIcons.block,
-    edit: ColorEdit,
+    example: { attributes: {} }, // Show default example.
+    edit: ( props ) => { return ( ColorEdit( props ) ); },
     save: () => { return null; }
 
   } );

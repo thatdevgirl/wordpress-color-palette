@@ -57,9 +57,9 @@ class Color {
       <div class="cp-color">
         <div class="swatch" style="background-color: $hex"></div>
         <p class="cp-color-name">$label</p>
-        <p>$hex</p>
-        <p>RGB: $rgb</p>
-        <p>CMYK: $cmyk</p>
+        <p class="cp-color-hex">$hex</p>
+        <p class="cp-color-rgb">RGB: $rgb</p>
+        <p class="cp-color-cmyk">CMYK: $cmyk</p>
       </div>
 EOD;
 
