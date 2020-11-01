@@ -2,13 +2,14 @@
  * EDIT: Color
  */
 
-const { ColorPicker, PanelBody, TextControl } = wp.components;
-const { InspectorControls } = wp.editor;
-const { Fragment } = wp.element;
+const ColorEdit = ( props ) => {
 
-let colorPaletteEdit = ( props ) => {
+  const { ColorPicker, PanelBody, TextControl } = wp.components;
+  const { InspectorControls } = wp.blockEditor;
+  const { Fragment } = wp.element;
+
   // Get the values needed from props.
-  const { isSelected, setAttributes } = props;
+  const { setAttributes } = props;
   const { hex, label } = props.attributes;
 
   // Declare change event handlers.
@@ -20,19 +21,18 @@ let colorPaletteEdit = ( props ) => {
   // Return the edit UI.
   return (
     <Fragment>
-      { isSelected && (
-        <InspectorControls>
-          <PanelBody title='Color'>
 
-          <ColorPicker
-            color={ hex }
-            onChangeComplete={ onChangeHex }
-            disableAlpha
-          />
+      <InspectorControls>
+        <PanelBody title='Color'>
 
-          </PanelBody>
-        </InspectorControls>
-      ) }
+        <ColorPicker
+          color={ hex }
+          onChangeComplete={ onChangeHex }
+          disableAlpha
+        />
+
+        </PanelBody>
+      </InspectorControls>
 
       <div className='cp-color'>
         <div className='swatch' style={ swatchStyle }></div>
@@ -47,8 +47,10 @@ let colorPaletteEdit = ( props ) => {
 
         <p>{ hex }</p>
       </div>
+
     </Fragment>
   );
-}
 
-export default colorPaletteEdit;
+};
+
+export default ColorEdit;

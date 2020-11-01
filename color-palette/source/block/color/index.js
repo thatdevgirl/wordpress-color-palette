@@ -4,19 +4,23 @@
  * This block is the child block to the color palette block.
  */
 
-import colorEdit from './edit.js';
-import colorIcons from './icons.js';
+import ColorEdit from './edit.js';
+import ColorIcons from './icons.js';
 
-( function() {
+const Color = ( () => {
+
   const { registerBlockType } = wp.blocks;
 
   registerBlockType( 'tdg/color', {
     title: 'Color',
     description: 'Single color block.',
     category: 'widgets',
-    icon: colorIcons.block,
-    edit: colorEdit,
+    icon: ColorIcons.block,
+    edit: ColorEdit,
     save: () => { return null; }
+
   } );
 
 } )();
+
+export default Color;

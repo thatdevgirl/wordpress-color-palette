@@ -1,6 +1,10 @@
 /**
- * Individual color block.
+ * FRONT-END STYLES: Color
  */
+
+$black: #000;
+$white: #fff;
+$gray:  darken( $white, 20% );
 
 .cp-color {
   border: 1px solid $gray;
@@ -15,19 +19,12 @@
     padding: 25% 50%;
   }
 
-  p,
-  .editor-styles-wrapper p {
+  p {
     font-size: 0.85rem;
     margin: 0 0.25rem 0.5rem;
   }
 
   .cp-color-name {
     font-weight: bold;
-
-    // Editor styles.
-    input.components-text-control__input {
-      font-size: 0.85rem;
-      font-weight: bold;
-    }
   }
 }

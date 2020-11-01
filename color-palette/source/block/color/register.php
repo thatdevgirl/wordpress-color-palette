@@ -1,0 +1,133 @@
+<?php
+
+/**
+ * Color block (single) registration and render functionality.
+ */
+
+namespace ThatDevGirl\ColorPalette;
+
+class Color {
+
+  /**
+   * __construct()
+   */
+  public function __construct() {
+    add_action( 'init', [ $this, 'register' ] );
+  }
+
+
+  /**
+   * register()
+   *
+   * Register the block.
+   *
+   * @return void
+   */
+  public function register(): void {
+    register_block_type( 'tdg/color', array(
+      'attributes' => array(
+        'hex'   => array( 'type' => 'string', 'default' => '' ),
+        'label' => array( 'type' => 'string', 'default' => '' )
+      ),
+
+      'render_callback' => [ $this, 'render' ]
+    ) );
+  }
+
+
+  /**
+   * render()
+   *
+   * Render the block's front-end code.
+   *
+   * @param array $attributes
+   * @return string
+   */
+  public function render( $attributes ): string {
+    // Get attribute data.
+    $label = $attributes[ 'label' ];
+    $hex = $attributes[ 'hex' ];
+
+    // Get Hex converted to RGB and CMYK.
+    $rgb = implode( ', ', $this->hex2rgb( $hex ) );
+    $cmyk = implode( ', ', $this->hex2cmyk( $hex ) );
+
+    // Construct the HTML.
+    $html = <<<EOD
+      <div class="cp-color">
+        <div class="swatch" style="background-color: $hex"></div>
+        <p class="cp-color-name">$label</p>
+        <p>$hex</p>
+        <p>RGB: $rgb</p>
+        <p>CMYK: $cmyk</p>
+      </div>
+EOD;
+
+    return $html;
+  }
+
+
+  /**
+   * hex2rgb()
+   *
+   * Convert Hex color value to RBG.
+   *
+   * @param string $hex
+   * @return array
+   */
+  private function hex2rgb( $hex ): array {
+    $hex = str_replace( '#', '', $hex );
+
+    if ( strlen( $hex ) == 3 ) {
+      $red   = hexdec( substr( $hex, 0, 1 ).substr( $hex, 0, 1 ) );
+      $green = hexdec( substr( $hex, 1, 1 ).substr( $hex, 1, 1 ) );
+      $blue  = hexdec( substr( $hex, 2, 1 ).substr( $hex, 2, 1 ) );
+    } else {
+      $red   = hexdec( substr( $hex, 0, 2 ) );
+      $green = hexdec( substr( $hex, 2, 2 ) );
+      $blue  = hexdec( substr( $hex, 4, 2 ) );
+    }
+
+    // Return the RGB values as a string since they are display-only.
+    return [ $red, $green, $blue ];
+  }
+
+
+  /**
+   * hex2cmyk()
+   *
+   * Convert Hex color value to CMYK.
+   *
+   * @param string $hex
+   * @return array
+   */
+  private function hex2cmyk( $hex ): array {
+    $hex = str_replace( '#', '', $hex );
+
+    // Convert to RGB first.
+    $rgb = $this->hex2rgb( $hex );
+
+    // Get RGB values from array
+    $r = $rgb['0'];
+    $g = $rgb['1'];
+    $b = $rgb['2'];
+
+    // Then convert to CMYK.
+    $cyan    = 1 - ( $r / 255 );
+    $magenta = 1 - ( $g / 255 );
+    $yellow  = 1 - ( $b / 255 );
+
+    $black  = min( $cyan, $magenta, $yellow );
+
+    $cyan    = ( $black != 1 ) ? round( @( ($cyan    - $black) / (1 - $black)) * 100, 0 ) : 0;
+    $magenta = ( $black != 1 ) ? round( @( ($magenta - $black) / (1 - $black)) * 100, 0 ) : 0;
+    $yellow  = ( $black != 1 ) ? round( @( ($yellow  - $black) / (1 - $black)) * 100, 0 ) : 0;
+    $black   = round( $black * 100, 0 );
+
+    // Return the CMYK values as a string since they are display-only.
+    return [ $cyan, $magenta, $yellow, $black ];
+  }
+
+}
+
+new Color;

@@ -10,8 +10,7 @@ const gulp = require( 'gulp' ),
 
 // Array of JS files, in order by dependency.
 const jsFiles = [
-  'color-palette/source/block/colors/index.js',
-  'color-palette/source/block/color/index.js',
+  'color-palette/source/scripts.js',
   'color-palette/shortcode/source/cp-admin.js'
 ];
 
@@ -26,9 +25,18 @@ gulp.task( 'js', () => {
     .pipe( gulp.dest( 'color-palette/build' ) );
 } );
 
-// CSS build task.
-gulp.task( 'css', () => {
-  return gulp.src( 'color-palette/source/scss/color-palette.scss' )
+// CSS front-end build task.
+gulp.task( 'css-frontend', () => {
+  return gulp.src( 'color-palette/source/styles-frontend.scss' )
+    .pipe( sass().on( 'error', sass.logError ) )
+    .pipe( clean() )
+    .pipe( rename( {suffix: '.min'} ) )
+    .pipe( gulp.dest( 'color-palette/build' ) );
+} );
+
+// CSS editor build task.
+gulp.task( 'css-editor', () => {
+  return gulp.src( 'color-palette/source/styles-editor.scss' )
     .pipe( sass().on( 'error', sass.logError ) )
     .pipe( clean() )
     .pipe( rename( {suffix: '.min'} ) )
@@ -45,4 +53,4 @@ gulp.task( 'admincss', () => {
 } );
 
 // Default task.
-gulp.task( 'default', gulp.series( 'js', 'css', 'admincss' ) );
+gulp.task( 'default', gulp.series( 'js', 'css-frontend', 'css-editor', 'admincss' ) );

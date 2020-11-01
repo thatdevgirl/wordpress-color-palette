@@ -1,0 +1,25 @@
+/**
+ * EDITOR STYLES: Color
+ */
+
+$white: #fff;
+$gray:  darken( $white, 20% );
+
+.block-editor-inner-blocks {
+  .cp-color {
+    p {
+      font-size: 0.85rem;
+      margin: 0 0.25rem 0.5rem;
+    }
+  }
+
+  .cp-color-name {
+    margin: 0;
+
+    input.components-text-control__input {
+      border-color: $gray;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+  }
+}

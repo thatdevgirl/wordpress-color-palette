@@ -1,6 +1,10 @@
 /**
- * Layout styles.
+ * FRONT-END STYLES: Colors
  */
+
+$sm: 640px;
+$md: 960px;
+$lg: 1200px;
 
 .cp-palette {
   max-width: 100%;
@@ -20,18 +24,5 @@
 
   @media screen and ( min-width: $lg ) {
     grid-template-columns: repeat( 4, 1fr );
-  }
-}
-
-// Editor styles.
-
-.block-editor .cp-colors {
-  display: block;
-
-  .editor-block-list__layout,
-  .block-editor-block-list__layout {
-    display: grid;
-    grid-column-gap: 2rem;
-    grid-template-columns: repeat( 3, 1fr );
   }
 }

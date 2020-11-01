@@ -1,0 +1,14 @@
+/**
+ * EDITOR STYLES: Colors
+ */
+
+.block-editor .cp-colors {
+  display: block;
+
+  .editor-block-list__layout,
+  .block-editor-block-list__layout {
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-template-columns: repeat( 3, 1fr );
+  }
+}
