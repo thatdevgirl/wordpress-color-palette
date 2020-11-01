@@ -6,12 +6,9 @@ const ColorsSave = ( props ) => {
 
   const { InnerBlocks } = wp.blockEditor;
 
-  // Get the values needed from props.
-  const { style } = props.attributes;
-
   return (
     <div className='cp-palette'>
-      <div className={`cp-colors${ style }`}>
+      <div className='cp-colors'>
         <InnerBlocks.Content />
       </div>
     </div>

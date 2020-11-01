@@ -5,6 +5,7 @@
  */
 
 import ColorEdit from './edit.js';
+import ColorExample from './example.js';
 import ColorIcons from './icons.js';
 
 const Color = ( () => {
@@ -13,13 +14,12 @@ const Color = ( () => {
 
   registerBlockType( 'tdg/color', {
     title: 'Color',
-    description: 'Single color block.',
-    category: 'widgets',
+    description: 'A single color block.',
+    category: 'design',
     icon: ColorIcons.block,
-    example: { attributes: {} }, // Show default example.
+    example: ColorExample,
     edit: ( props ) => { return ( ColorEdit( props ) ); },
     save: () => { return null; }
-
   } );
 
 } )();

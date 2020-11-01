@@ -4,7 +4,7 @@ This WordPress plugin adds a Color Palette block to the post editor, to be used 
 
 ## The Color Palette block
 
-The __Color Palette__ block displays a group of colors on your page. The block starts with 4 individual __Color__ blocks, but you can add additional blocks or remove excess blocks as needed.
+The __Color Palette__ block displays a group of colors on your page. The block starts with 3 individual __Color__ blocks, but you can add additional blocks or remove excess blocks as needed.
 
 Give each color block a color using the selector in the Inspector Panel on the right-hand side of the editor, give your color a name, and you're done!
 

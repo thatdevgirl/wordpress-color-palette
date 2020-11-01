@@ -42,10 +42,10 @@ $gray:  darken( $white, 20% );
 
 
 /**
- * Stylized card.
+ * Stylized card color display.
  */
 
-.stylized-card .cp-color {
+.cp-palette.is-style-stylized-card .cp-color {
   border: 0;
   border-radius: 0;
   box-shadow: 2px 2px 4px $gray;
@@ -86,10 +86,10 @@ $gray:  darken( $white, 20% );
 
 
 /**
- * Circle.
+ * Circle color display.
  */
 
-.circle .cp-color {
+.cp-palette.is-style-circle .cp-color {
   border: 0;
   border-radius: 0;
   padding: 0;

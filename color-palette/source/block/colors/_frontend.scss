@@ -6,46 +6,58 @@ $sm: 640px;
 $md: 960px;
 $lg: 1200px;
 
+
+/**
+ * Block container.
+ */
+
 .cp-palette {
   max-width: 100%;
   width: 100%;
 }
 
+
+/**
+ * Palette container.
+ */
+
 .cp-colors {
-
-  // Special grid styles for circle color display.
-  &.circle {
-    display: grid;
-    grid-column-gap: 4rem;
-    grid-template-columns: repeat( 2, 1fr );
-  }
-
   @media screen and ( min-width: $sm ) {
     display: grid;
     grid-column-gap: 2rem;
     grid-template-columns: repeat( 2, 1fr );
-
-    // Special grid styles for circle color display.
-    &.circle {
-      grid-column-gap: 6rem;
-      grid-template-columns: repeat( 4, 1fr );
-    }
   }
 
   @media screen and ( min-width: $md ) {
     grid-template-columns: repeat( 3, 1fr );
-
-    // Special grid styles for circle color display.
-    &.circle {
-      grid-template-columns: repeat( 4, 1fr );
-    }
   }
 
   @media screen and ( min-width: $lg ) {
     grid-template-columns: repeat( 4, 1fr );
+  }
+}
 
-    // Special grid styles for circle color display.
-    &.circle {
+
+/**
+ * Special grid styles for circle color display.
+ */
+
+.cp-palette.is-style-circle {
+  .cp-colors {
+    display: grid;
+    grid-column-gap: 4rem;
+    grid-template-columns: repeat( 2, 1fr );
+
+    @media screen and ( min-width: $sm ) {
+      grid-column-gap: 6rem;
+      grid-template-columns: repeat( 4, 1fr );
+    }
+
+    @media screen and ( min-width: $md ) {
+      grid-template-columns: repeat( 4, 1fr );
+    }
+
+    @media screen and ( min-width: $lg ) {
       grid-template-columns: repeat( 6, 1fr );
     }
   }

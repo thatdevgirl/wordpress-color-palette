@@ -5,6 +5,7 @@
  */
 
 import ColorsEdit from './edit.js';
+import ColorsExample from './example.js';
 import ColorsIcons from './icons.js';
 import ColorsSave from './save.js';
 
@@ -14,15 +15,17 @@ const Colors = ( () => {
 
   registerBlockType( 'tdg/colors', {
     title: 'Color Palette',
-    description: 'Group of related color blocks.',
-    category: 'widgets',
+    description: 'A group of related color swatches.',
+    category: 'design',
     keywords: [ 'colors', 'styles', 'visual identity' ],
-    example: { attributes: {} }, // Show default example.
     icon: ColorsIcons.block,
+    example: ColorsExample,
 
-    attributes: {
-      style: { type: 'string', default: '' }
-    },
+    styles: [
+      { name: 'basic-card',    label: 'Basic Card', isDefault: true },
+      { name: 'stylized-card', label: 'Stylized Card' },
+      { name: 'circle',        label: 'Circle' },
+    ],
 
     edit: ( props ) => { return ( ColorsEdit( props ) ); },
     save: ( props ) => { return ( ColorsSave( props ) ); }
