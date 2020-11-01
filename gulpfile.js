@@ -1,5 +1,4 @@
 const gulp = require( 'gulp' ),
-      babel = require( 'gulp-babel' )
       browserify = require( 'browserify' ),
       buffer = require( 'vinyl-buffer' ),
       clean = require( 'gulp-clean-css' ),
@@ -8,49 +7,63 @@ const gulp = require( 'gulp' ),
       source = require( 'vinyl-source-stream' ),
       uglify = require( 'gulp-uglify' );
 
-// Array of JS files, in order by dependency.
+
+/**
+ * Javascript build task.
+ */
+
 const jsFiles = [
   'color-palette/source/scripts.js',
   'color-palette/shortcode/source/cp-admin.js'
 ];
 
-// JS build task.
-gulp.task( 'js', () => {
+function jsTask() {
   return browserify( { entries: jsFiles } )
-    .transform( 'babelify', { presets: ['es2015', 'react'] } )
+    .transform( 'babelify', { presets: [ '@babel/preset-env', '@babel/preset-react' ] } )
     .bundle()
-    .pipe( source( 'color-palette.min.js' ) )
+    .pipe( source( 'color-palette.min.j' ) )
     .pipe( buffer() )
     .pipe( uglify() )
     .pipe( gulp.dest( 'color-palette/build' ) );
-} );
+}
 
-// CSS front-end build task.
-gulp.task( 'css-frontend', () => {
+
+/**
+ * CSS build tasks.
+ */
+
+// Front-end.
+function cssFrontendTask() {
   return gulp.src( 'color-palette/source/styles-frontend.scss' )
     .pipe( sass().on( 'error', sass.logError ) )
     .pipe( clean() )
     .pipe( rename( {suffix: '.min'} ) )
     .pipe( gulp.dest( 'color-palette/build' ) );
-} );
+}
 
-// CSS editor build task.
-gulp.task( 'css-editor', () => {
+// Editor.
+function cssEditorTask() {
   return gulp.src( 'color-palette/source/styles-editor.scss' )
     .pipe( sass().on( 'error', sass.logError ) )
     .pipe( clean() )
     .pipe( rename( {suffix: '.min'} ) )
     .pipe( gulp.dest( 'color-palette/build' ) );
-} );
+}
 
-// Admin CSS build task.
-gulp.task( 'admincss', () => {
+// Admin.
+function cssAdminTask() {
   return gulp.src( 'color-palette/shortcode/source/cp-admin.scss' )
     .pipe( sass().on( 'error', sass.logError ) )
     .pipe( clean() )
     .pipe( rename( {suffix: '.min'} ) )
     .pipe( gulp.dest( 'color-palette/shortcode/build' ) );
-} );
+}
 
-// Default task.
-gulp.task( 'default', gulp.series( 'js', 'css-frontend', 'css-editor', 'admincss' ) );
+
+/**
+ * Task definitions.
+ */
+
+gulp.task( 'default', gulp.series( jsTask, cssFrontendTask, cssEditorTask, cssAdminTask ) );
+gulp.task( 'js', jsTask );
+gulp.task( 'css', gulp.series( cssFrontendTask, cssEditorTask, cssAdminTask ) );
