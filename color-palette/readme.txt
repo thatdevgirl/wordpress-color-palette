@@ -3,7 +3,7 @@ Contributors: thatdevgirl
 Donate Link: https://www.paypal.me/thatdevgirl
 Tags: colors, branding, palette, visual identity
 Requires at least: 5.0
-Tested up to: 5.4
+Tested up to: 5.5
 Stable tag: 3.2
 
 Add a Color Palette block to pages in the post editor.
@@ -28,8 +28,11 @@ If you need to use the same color palette on multiple pages or posts, simply sav
 
 == Screenshots ==
 
-1. The color palette block in the post editor.
-2. The color palette block on the front-end.
+1. The Color Palette block in the post editor, displaying the colors as stylized cards.
+2. The Color Palette block in the post editor, displaying the colors as circles.
+3. The single Color block as a child block to the Color Palette block.
+4. The Color Palette block in the front-end, displaying the colors as stylized cards.
+5. The Color Palette block in the front-end, displaying the colors as circles.
 
 == Changelog ==
 
