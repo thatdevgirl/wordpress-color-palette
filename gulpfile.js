@@ -21,7 +21,7 @@ function jsTask() {
   return browserify( { entries: jsFiles } )
     .transform( 'babelify', { presets: [ '@babel/preset-env', '@babel/preset-react' ] } )
     .bundle()
-    .pipe( source( 'color-palette.min.j' ) )
+    .pipe( source( 'color-palette.min.js' ) )
     .pipe( buffer() )
     .pipe( uglify() )
     .pipe( gulp.dest( 'color-palette/build' ) );

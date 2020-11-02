@@ -19,7 +19,7 @@ if ( !defined( 'ABSPATH' ) ) {
 require_once( 'inc/setup.php' );
 
 // Register dynamic blocks.
-require_once( 'source/block/color/register.php' );
+require_once( 'source/blocks/color/register.php' );
 
 // [DEPRECATED] Shortcode functionality.
 require_once( 'shortcode/index.php' );

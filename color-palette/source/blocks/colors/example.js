@@ -15,15 +15,15 @@ const ColorsExample = {
     {
       name: 'tdg/color',
       attributes: {
-        'hex': '#e2c2c6',
-        'label': 'Queen Pink'
+        'hex': '#559cad',
+        'label': 'Pacific Blue'
       }
     },
     {
       name: 'tdg/color',
       attributes: {
-        'hex': '#b9929f',
-        'label': 'English Lavender'
+        'hex': '#c1b2ab',
+        'label': 'Pale Silver'
       }
     },
   ]
