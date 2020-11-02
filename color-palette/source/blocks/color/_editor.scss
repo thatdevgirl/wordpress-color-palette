@@ -14,12 +14,11 @@ $gray:  darken( $white, 20% );
   }
 
   .cp-color-name {
-    margin: 0;
-
     input.components-text-control__input {
       border-color: $gray;
       font-size: 0.85rem;
       font-weight: bold;
+      margin-bottom: 1rem;
     }
   }
 }

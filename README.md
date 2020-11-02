@@ -20,6 +20,10 @@ You can select the "Color block style" inside the __Color Palette__ block by usi
 * __Stylized card:__ Each color is displayed in a rectangular card, just like the basic card, but with a bit more design added to it.
 * __Circle:__ Each color is displayed as a circle of color, with the name and color values centered underneath the circle of color.
 
+## Color code options
+
+Inside the __Color Palette__ block, you can select which color codes (Hex, RGB, or CMYK) should be hidden on the page. These options are in the Inspector Panel and apply to _all_ color blocks inside the palette.
+
 ## Reusability
 
 If you need to use the same color palette on multiple pages or posts, simply save the __Color Palette__ block with all of your colors as a reusable block via the post editor.

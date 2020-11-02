@@ -42,6 +42,17 @@ $gray:  darken( $white, 20% );
 
 
 /**
+ * Options on the palette to hide color codes.
+ */
+
+.cp-colors {
+  &.hide-hex .cp-color-hex { display: none; }
+  &.hide-rgb .cp-color-rgb { display: none; }
+  &.hide-cmyk .cp-color-cmyk { display: none; }
+}
+
+
+/**
  * Stylized card color display.
  */
 

@@ -27,6 +27,12 @@ const Colors = ( () => {
       { name: 'circle',        label: 'Circle' },
     ],
 
+    attributes: {
+      hideHex:  { type: 'boolean' },
+      hideRGB:  { type: 'boolean' },
+      hideCMYK: { type: 'boolean' }
+    },
+
     edit: ( props ) => { return ( ColorsEdit( props ) ); },
     save: ( props ) => { return ( ColorsSave( props ) ); }
   } );
