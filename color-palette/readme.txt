@@ -40,6 +40,7 @@ If you need to use the same color palette on multiple pages or posts, simply sav
 * Code refactor to ensure blocks are not using deprecated components.
 * Tested to ensure support for WP v5.5.
 * Introducing new options for the color block display.
+* Introducing the ability to hide Hex, RBG, or CMYK codes from front-end display.
 
 = 3.1 =
 * Tested for compatibility with the upcoming WordPress core 5.4 release.
