@@ -1,7 +1,7 @@
 === Color Palette ===
 Contributors: thatdevgirl
 Donate Link: https://www.paypal.me/thatdevgirl
-Tags: colors, branding, palette, visual identity
+Tags: colors, branding, palette, visual identity, block
 Requires at least: 5.0
 Tested up to: 5.5
 Stable tag: 3.2
@@ -35,6 +35,11 @@ If you need to use the same color palette on multiple pages or posts, simply sav
 5. The Color Palette block in the front-end, displaying the colors as circles.
 
 == Changelog ==
+
+= 4.0 =
+* I really want to include these blocks in the Block Directory. In order to do that, shortcode support must go. Sorry folks. You can stay on version 3.2 if you love your shortcodes. Otherwise, please consider converting to blocks and upgrading!
+* Officially declaring the Color block as a child of the Color Palette block. (If you want to display a single color, you can create a palette of one color.)
+* Adding block.json files to both the Color child block and Color Palette parent block.
 
 = 3.2 =
 * Code refactor to ensure blocks are not using deprecated components.

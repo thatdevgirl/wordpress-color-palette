@@ -1,0 +1,18 @@
+{
+  "apiVersion": 2,
+  "name": "tdg/color",
+  "category": "design",
+  "parent": [
+		"tdg/colors"
+	],
+  "attributes": {
+    "hex":  {
+      "type": "string",
+      "default": ""
+    },
+    "label":  {
+      "type": "string",
+      "default": ""
+    }
+  }
+}

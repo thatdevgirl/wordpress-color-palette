@@ -1,0 +1,16 @@
+{
+  "apiVersion": 2,
+  "name": "tdg/colors",
+  "category": "design",
+  "attributes": {
+    "hideHex":  {
+      "type": "boolean"
+    },
+    "hideRGB":  {
+      "type": "boolean"
+    },
+    "hideCMYK": {
+      "type": "boolean"
+    }
+  }
+}

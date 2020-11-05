@@ -18,6 +18,7 @@ const Color = ( () => {
     category: 'design',
     icon: ColorIcons.block,
     example: ColorExample,
+    parent: [ 'tdg/color' ],
     edit: ( props ) => { return ( ColorEdit( props ) ); },
     save: () => { return null; }
   } );

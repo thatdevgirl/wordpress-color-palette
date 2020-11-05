@@ -12,13 +12,8 @@ const gulp = require( 'gulp' ),
  * Javascript build task.
  */
 
-const jsFiles = [
-  'color-palette/source/scripts.js',
-  'color-palette/shortcode/source/cp-admin.js'
-];
-
 function jsTask() {
-  return browserify( { entries: jsFiles } )
+  return browserify( { entries: [ 'color-palette/source/scripts.js' ] } )
     .transform( 'babelify', { presets: [ '@babel/preset-env', '@babel/preset-react' ] } )
     .bundle()
     .pipe( source( 'color-palette.min.js' ) )
@@ -50,20 +45,11 @@ function cssEditorTask() {
     .pipe( gulp.dest( 'color-palette/build' ) );
 }
 
-// Admin.
-function cssAdminTask() {
-  return gulp.src( 'color-palette/shortcode/source/cp-admin.scss' )
-    .pipe( sass().on( 'error', sass.logError ) )
-    .pipe( clean() )
-    .pipe( rename( {suffix: '.min'} ) )
-    .pipe( gulp.dest( 'color-palette/shortcode/build' ) );
-}
-
 
 /**
  * Task definitions.
  */
 
-gulp.task( 'default', gulp.series( jsTask, cssFrontendTask, cssEditorTask, cssAdminTask ) );
+gulp.task( 'default', gulp.series( jsTask, cssFrontendTask, cssEditorTask ) );
 gulp.task( 'js', jsTask );
-gulp.task( 'css', gulp.series( cssFrontendTask, cssEditorTask, cssAdminTask ) );
+gulp.task( 'css', gulp.series( cssFrontendTask, cssEditorTask ) );
