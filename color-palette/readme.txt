@@ -10,11 +10,9 @@ Add a Color Palette block to pages in the post editor.
 
 == Description ==
 
-The "Color Palette" block displays a group of colors on your page. The block starts with 3 individual "Color" blocks, but you can add additional blocks or remove excess blocks as needed.
+The Color Palette block displays a group of colors on your page. The block starts with 3 individual Color blocks, but you can add additional blocks or remove excess blocks as needed.
 
-Give each color block a color using the selector in the Inspector Panel on the right-hand side of the editor, give your color a name, and you're done!
-
-If you need to use the same color palette on multiple pages or posts, simply save the "Color Palette" block with all of your colors as a reusable block through the editor.
+Give each color block a color using the selector in the Inspector Panel on the right-hand side of the editor, give your color a name, and you are done! If you need to use the same color palette on multiple pages or posts, simply save the Color Palette block with all of your colors as a reusable block through the editor.
 
 == Installation ==
 
