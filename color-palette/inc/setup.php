@@ -15,6 +15,7 @@ class Setup {
     add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_editor_assets' ] );
     add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_frontend_assets' ] );
     add_filter( 'plugin_row_meta', [ $this, 'add_meta' ], 10, 2 );
+    add_action( 'in_plugin_update_message-color-palette/color-palette.php', [ $this, 'update_message' ], 10, 2 );
   }
 
 
@@ -87,6 +88,20 @@ class Setup {
     }
 
     return $links;
+  }
+
+
+  /**
+   * update_message()
+   *
+   * Add an update message for the 4.0 version because it contains breaking
+   * changes.
+   */
+  public function update_message( $data, $response ) {
+    printf(
+      '<div class="update-message"><p><strong>%s</strong></p></div>',
+      __( 'Version 4.0 is a breaking change. Please update any color palette shortcodes to blocks before upgrading.', 'tdg-color-palette' )
+    );
   }
 
 }

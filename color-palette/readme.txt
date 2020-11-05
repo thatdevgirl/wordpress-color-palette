@@ -74,5 +74,8 @@ If you need to use the same color palette on multiple pages or posts, simply sav
 
 == Upgrade Notice ==
 
+= 4.0 =
+This is it! The color palette shortcodes are no longer supported as of this version. Please convert your shortcodes to the Color Palette block in the post editor before upgrading.
+
 = 3.0 =
 Major code refactor to add the 'Color Palette' block to the editor. Please note that the settings page and shortcodes are no longer recommended and will be deprecated in a future version.
