@@ -4,7 +4,7 @@ Donate Link: https://www.paypal.me/thatdevgirl
 Tags: colors, branding, palette, visual identity, block
 Requires at least: 5.0
 Tested up to: 5.5
-Stable tag: 3.2
+Stable tag: 4.0
 
 Add a Color Palette block to pages in the post editor.
 
