@@ -1,7 +1,10 @@
 {
-  "apiVersion": 2,
   "name": "tdg/colors",
+  "title": "Color Palette",
+  "description": "A group of related color swatches.",
   "category": "design",
+  "icon": <svg height='20px' width='20px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><switch><g><path d='M97.5,70.4c-1,1.1-2.3,1.9-3.7,2.5L34.5,97.5h56.7c3.5,0,6.3-2.9,6.3-6.3V71C97.5,70.8,97.5,70.6,97.5,70.4z' /><path d='M92,68.6c3.2-1.3,4.8-5,3.4-8.3l-7.7-18.7c-0.1-0.2-0.1-0.3-0.2-0.4c-0.5,1.4-1.4,2.6-2.5,3.7L39.7,90.2L92,68.6z' /><path d='M81.6,41.6c2.5-2.5,2.5-6.5,0-9L67.3,18.4c-0.1-0.1-0.2-0.2-0.3-0.3c0,1.5-0.3,2.9-0.9,4.4L41.6,81.7L81.6,41.6z' /><path d='M40.1,72.9l21.7-52.3c1.3-3.2-0.2-6.9-3.4-8.3L39.7,4.6c-0.2-0.1-0.3-0.1-0.5-0.1c0.6,1.3,0.9,2.8,0.9,4.3V72.9z' /><path d='M35.4,8.8c0-3.5-2.8-6.3-6.3-6.3H8.8c-3.5,0-6.3,2.8-6.3,6.3v82.3c0,3.5,2.8,6.3,6.3,6.3h20.2c3.5,0,6.3-2.8,6.3-6.3V8.8 z M18.9,86.8c-3.2,0-5.8-2.6-5.8-5.8c0-3.2,2.6-5.8,5.8-5.8s5.8,2.6,5.8,5.8C24.7,84.2,22.1,86.8,18.9,86.8z' /></g></switch></svg>,
+  "keywords": [ "colors", "styles", "visual identity" ],
   "attributes": {
     "hideHex":  {
       "type": "boolean"
@@ -12,5 +15,8 @@
     "hideCMYK": {
       "type": "boolean"
     }
-  }
+  },
+  "script": "file:../../../build/color-palette.min.js",
+  "editorStyle": "file:../../../build/styles-editor.min.css",
+  "style": "file:../../../build/styles-frontend.min.css"
 }
