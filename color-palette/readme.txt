@@ -1,6 +1,6 @@
 === Color Palette ===
 Contributors: thatdevgirl
-Donate Link: https://www.paypal.me/thatdevgirl
+Donate Link: https://www.buymeacoffee.com/thatdevgirl
 Tags: colors, branding, palette, visual identity, block
 Requires at least: 5.0
 Tested up to: 5.7
@@ -33,6 +33,9 @@ Give each color block a color using the selector in the Inspector Panel on the r
 5. The Color Palette block in the front-end, displaying the colors as circles.
 
 == Changelog ==
+
+= 4.1 =
+* 
 
 = 4.0 =
 * I really want to include these blocks in the Block Directory. In order to do that, shortcode support must go. Sorry folks. You can stay on version 3.2 if you love your shortcodes. Otherwise, please consider converting to blocks and upgrading!

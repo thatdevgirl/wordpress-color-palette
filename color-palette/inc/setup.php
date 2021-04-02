@@ -81,7 +81,7 @@ class Setup {
   public function add_meta( $links, $file ) {
     if ( strpos( $file, 'color-palette' ) !== false ) {
       $additional_links = array(
-        '<a href="' . esc_url( 'https://www.paypal.me/thatdevgirl' ) . '">Donate</a>',
+        '<a href="' . esc_url( 'https://www.buymeacoffee.com/thatdevgirl' ) . '">Donate</a>',
       );
 
       return array_merge( $links, $additional_links );
