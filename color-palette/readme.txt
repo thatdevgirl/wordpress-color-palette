@@ -4,7 +4,7 @@ Donate Link: https://www.buymeacoffee.com/thatdevgirl
 Tags: colors, branding, palette, visual identity, block
 Requires at least: 5.0
 Tested up to: 5.7
-Stable tag: 4.0
+Stable tag: 4.1
 
 Add a Color Palette block to pages in the post editor.
 
@@ -35,6 +35,7 @@ Give each color block a color using the selector in the Inspector Panel on the r
 == Changelog ==
 
 = 4.1 =
+* Updating donation link.
 * 
 
 = 4.0 =

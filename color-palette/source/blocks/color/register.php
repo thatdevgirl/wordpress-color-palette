@@ -24,14 +24,15 @@ class Color {
    * @return void
    */
   public function register(): void {
-    register_block_type( 'tdg/color', array(
-      'attributes' => array(
-        'hex'   => array( 'type' => 'string', 'default' => '' ),
-        'label' => array( 'type' => 'string', 'default' => '' )
-      ),
+    register_block_type( 'tdg/color', [
+      'attributes' => [
+        'hex'       => [ 'type' => 'string', 'default' => '' ],
+        'label'     => [ 'type' => 'string', 'default' => '' ],
+        'autoLabel' => [ 'type' => 'string', 'default' => '' ]
+      ],
 
       'render_callback' => [ $this, 'render' ]
-    ) );
+    ] );
   }
 
 
@@ -44,8 +45,9 @@ class Color {
    * @return string
    */
   public function render( $attributes ): string {
-    // Get attribute data.
-    $label = $attributes[ 'label' ];
+    // Get attribute data. If there is no actual label, the label is the
+    // automatically generated label.
+    $label = $attributes[ 'label' ] ? $attributes[ 'label' ] : $attributes[ 'autoLabel' ];
     $hex = $attributes[ 'hex' ];
 
     // Get Hex converted to RGB and CMYK.
@@ -53,7 +55,7 @@ class Color {
     $cmyk = implode( ', ', $this->hex2cmyk( $hex ) );
 
     // Construct the HTML.
-    $html = <<<EOD
+    $html = <<<HTML
       <div class="cp-color">
         <div class="swatch" style="background-color: $hex"></div>
         <p class="cp-color-name">$label</p>
@@ -61,7 +63,7 @@ class Color {
         <p class="cp-color-rgb">RGB: $rgb</p>
         <p class="cp-color-cmyk">CMYK: $cmyk</p>
       </div>
-EOD;
+HTML;
 
     return $html;
   }
