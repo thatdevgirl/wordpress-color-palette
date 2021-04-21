@@ -45,10 +45,14 @@ class Color {
    * @return string
    */
   public function render( $attributes ): string {
-    // Get attribute data. If there is no actual label, the label is the
-    // automatically generated label.
-    $label = $attributes[ 'label' ] ? $attributes[ 'label' ] : $attributes[ 'autoLabel' ];
+    // If there is no hex value, do not display a swatch because there is
+    // nothing to display here.
     $hex = $attributes[ 'hex' ];
+    if ( !$hex ) { return ''; }
+
+    // Get the label. If there is no actual label, the label is the
+    // automatically generated label.
+    $label = $attributes['label'] ? $attributes['label'] : $attributes['autoLabel'];
 
     // Get Hex converted to RGB and CMYK.
     $rgb = implode( ', ', $this->hex2rgb( $hex ) );

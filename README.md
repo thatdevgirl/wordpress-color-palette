@@ -8,9 +8,11 @@ The __Color Palette__ block displays a group of colors on your page. The block s
 
 Give each color block a color using the selector in the Inspector Panel on the right-hand side of the editor, give your color a name, and you're done!
 
+If you are feeling a bit uninspired about color names, the __Color__ block will automatically generate one for you. _(Don't worry. You can always change the name to something different.)_ Thank you to the [Name That Color](https://chir.ag/projects/ntc/) library for that functionality.
+
 ### What is displayed
 
-Each color in the palette will display a swatch of the selected color, the given color name, as well as the Hex, RGB, and CMYK values for that color.
+Each color in the palette will display a swatch of the selected color, the color name, as well as the Hex, RGB, and CMYK values for that color.
 
 ## Palette color block styles
 

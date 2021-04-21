@@ -36,7 +36,7 @@ Give each color block a color using the selector in the Inspector Panel on the r
 
 = 4.1 =
 * Updating donation link.
-* 
+* Adding functionality from the Name That Color library to automatically add color labels. Check out https://chir.ag/projects/ntc/ and thank you to Paul C for the suggestion!
 
 = 4.0 =
 * I really want to include these blocks in the Block Directory. In order to do that, shortcode support must go. Sorry folks. You can stay on version 3.2 if you love your shortcodes. Otherwise, please consider converting to blocks and upgrading!

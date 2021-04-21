@@ -15,8 +15,8 @@ const ColorEdit = ( props ) => {
   const { hex, label, autoLabel } = props.attributes;
 
   // Declare change event handlers.
-  const onChangeHex   = ( value ) => { setAttributes( { hex: value.hex } ) };
-  const onChangeLabel = ( value ) => { setAttributes( { label: value } ) };
+  const onChangeHex       = ( value ) => { setAttributes( { hex: value.hex } ) };
+  const onChangeLabel     = ( value ) => { setAttributes( { label: value } ) };
 
   // Get the automatic name for this hex from the "Name That Color" API.
   // This will be used as the placeholder text for the Color Label attribute
@@ -26,6 +26,7 @@ const ColorEdit = ( props ) => {
   const ntcName = ntc.name( hex );
   setAttributes( { autoLabel: ntcName[1] } );
 
+  // Define the style for the color swatch in the editor.
   const swatchStyle = { background: hex };
 
   // Return the edit UI.
@@ -34,7 +35,13 @@ const ColorEdit = ( props ) => {
 
       <InspectorControls>
 
-        <PanelBody title='Color selection'>
+        <PanelBody title='Color Selection' initialOpen={ true }>
+          <p>
+            Select a color for this swatch from the picker below. A name will
+            be automatically generated for your chosen color's label, but you
+            can always change that name by typing over it in the editor.
+          </p>
+
           <ColorPicker
             color={ hex }
             onChangeComplete={ onChangeHex }
@@ -48,19 +55,13 @@ const ColorEdit = ( props ) => {
 
         <div className='swatch' style={ swatchStyle }></div>
 
-        { hex && (
-          <Fragment>
-            <p className='cp-color-name'>
-              <TextControl
-                placeholder={ autoLabel }
-                value={ label }
-                onChange={ onChangeLabel }
-              />
-            </p>
-
-            <p className='cp-color-hex'>{ hex }</p>
-          </Fragment>
-        ) }
+        <p className='cp-color-name'>
+          <TextControl
+            placeholder={ autoLabel }
+            value={ label }
+            onChange={ onChangeLabel }
+          />
+        </p>
 
       </div>
 
