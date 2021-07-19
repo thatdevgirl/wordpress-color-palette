@@ -23,7 +23,7 @@ const ColorEdit = ( props ) => {
   // and will be displayed on the front-end unless the user selects the option
   // to not display a label.
   ntc.init();
-  const ntcName = ntc.name( hex );
+  const ntcName = hex ? ntc.name( hex ) : '';
   setAttributes( { autoLabel: ntcName[1] } );
 
   // Define the style for the color swatch in the editor.

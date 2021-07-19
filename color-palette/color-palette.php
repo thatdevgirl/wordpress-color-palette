@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Color Palette
  * Description: This WordPress plugin adds a color palette block to the post editor, to be used for branding and style guide pages.
- * Version: 4.1
+ * Version: 4.1.1
  * Author: Joni Halabi
  * Author URI: https://thatdevgirl.com
  * License: GPL2
