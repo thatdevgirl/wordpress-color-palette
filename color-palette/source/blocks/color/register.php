@@ -24,13 +24,7 @@ class Color {
    * @return void
    */
   public function register(): void {
-    register_block_type( 'tdg/color', [
-      'attributes' => [
-        'hex'       => [ 'type' => 'string', 'default' => '' ],
-        'label'     => [ 'type' => 'string', 'default' => '' ],
-        'autoLabel' => [ 'type' => 'string', 'default' => '' ]
-      ],
-
+    register_block_type_from_metadata( __DIR__, [
       'render_callback' => [ $this, 'render' ]
     ] );
   }

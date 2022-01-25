@@ -3,20 +3,20 @@
  */
 
 import { memoize, times } from 'lodash';
-import ColorsGetClasses from './get-classes.js';
+import { default as GetClasses } from './get-classes.js';
 
 const ColorsEdit = ( props ) => {
 
-  const { InnerBlocks, InspectorControls } = wp.blockEditor;
+  const { InnerBlocks, InspectorControls, useBlockProps } = wp.blockEditor;
   const { PanelBody, ToggleControl } = wp.components;
-  const { Fragment } = wp.element;
 
   // Get attributes from props.
   const { setAttributes } = props;
   const { hideHex, hideRGB, hideCMYK } = props.attributes;
+  const blockProps = useBlockProps();
 
   // Figure out what classes should be applied to the colors.
-  const colorsClasses = ColorsGetClasses( props );
+  const colorsClasses = GetClasses( props );
 
   // Change event handlers.
   const onChangeHideHex  = ( value ) => { setAttributes( { hideHex: value } ) };
@@ -33,7 +33,7 @@ const ColorsEdit = ( props ) => {
 
   // Return the edit UI.
   return (
-    <Fragment>
+    <div { ...blockProps }>
 
       <InspectorControls>
         <PanelBody title='Color code display options'>
@@ -71,7 +71,7 @@ const ColorsEdit = ( props ) => {
         </div>
       </div>
 
-    </Fragment>
+    </div>
   );
 
 };

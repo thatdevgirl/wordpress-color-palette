@@ -4,22 +4,18 @@
  * This block is the child block to the color palette block.
  */
 
-import ColorEdit from './edit.js';
-import ColorExample from './example.js';
-import ColorIcons from './icons.js';
+import { default as Edit } from './edit.js';
+import { default as Icons } from './icons.js';
+import { default as Metadata } from './block.json';
 
 const Color = ( () => {
 
   const { registerBlockType } = wp.blocks;
 
-  registerBlockType( 'tdg/color', {
-    title: 'Color',
-    description: 'A single color block.',
-    category: 'design',
-    icon: ColorIcons.block,
-    example: ColorExample,
+  registerBlockType( Metadata, {
+    icon: Icons.block,
     parent: [ 'tdg/color' ],
-    edit: ( props ) => { return ( ColorEdit( props ) ); },
+    edit: ( props ) => { return ( Edit( props ) ); },
     save: () => { return null; }
   } );
 

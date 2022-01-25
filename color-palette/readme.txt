@@ -34,6 +34,11 @@ Give each color block a color using the selector in the Inspector Panel on the r
 
 == Changelog ==
 
+= 4.2 =
+* Tested for compatibility with WordPress 5.9.
+* Code refactor to use the latest version of block.json.
+* Added front-end search functionality within the palette block. Search is opt-in. You can turn it on via an option in the Inspector Panel.
+
 = 4.1.1 =
 * Tested for compatibility with Wordpress 5.8.
 * Fixed minor "invalid color" bug when Color Palette block is added to a page.

@@ -4,22 +4,17 @@
  * This block is the parent color palette block.
  */
 
-import ColorsEdit from './edit.js';
-import ColorsExample from './example.js';
-import ColorsIcons from './icons.js';
-import ColorsSave from './save.js';
+import { default as Edit } from './edit.js';
+import { default as Icons } from './icons.js';
+import { default as Metadata } from './block.json';
+import { default as Save } from './save.js';
 
 const Colors = ( () => {
 
   const { registerBlockType } = wp.blocks;
 
-  registerBlockType( 'tdg/colors', {
-    title: 'Color Palette',
-    description: 'A group of related color swatches.',
-    category: 'design',
-    keywords: [ 'colors', 'styles', 'visual identity' ],
-    icon: ColorsIcons.block,
-    example: ColorsExample,
+  registerBlockType( Metadata, {
+    icon: Icons.block,
 
     styles: [
       { name: 'basic-card',    label: 'Basic Card', isDefault: true },
@@ -27,14 +22,8 @@ const Colors = ( () => {
       { name: 'circle',        label: 'Circle' },
     ],
 
-    attributes: {
-      hideHex:  { type: 'boolean' },
-      hideRGB:  { type: 'boolean' },
-      hideCMYK: { type: 'boolean' }
-    },
-
-    edit: ( props ) => { return ( ColorsEdit( props ) ); },
-    save: ( props ) => { return ( ColorsSave( props ) ); }
+    edit: ( props ) => { return ( Edit( props ) ); },
+    save: ( props ) => { return ( Save( props ) ); }
   } );
 
 } )();

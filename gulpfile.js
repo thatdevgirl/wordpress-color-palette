@@ -1,11 +1,11 @@
-const gulp = require( 'gulp' ),
+const gulp       = require( 'gulp' ),
       browserify = require( 'browserify' ),
-      buffer = require( 'vinyl-buffer' ),
-      clean = require( 'gulp-clean-css' ),
-      rename = require( 'gulp-rename' ),
-      sass = require( 'gulp-sass' ),
-      source = require( 'vinyl-source-stream' ),
-      uglify = require( 'gulp-uglify' );
+      buffer     = require( 'vinyl-buffer' ),
+      clean      = require( 'gulp-clean-css' ),
+      rename     = require( 'gulp-rename' ),
+      sass       = require( 'gulp-sass' ),
+      source     = require( 'vinyl-source-stream' ),
+      uglify     = require( 'gulp-uglify' );
 
 
 /**

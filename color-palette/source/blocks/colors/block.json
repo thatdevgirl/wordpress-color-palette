@@ -1,9 +1,13 @@
 {
+
+  "api_version": 2,
+
   "name": "tdg/colors",
   "title": "Color Palette",
-  "description": "A group of related color swatches.",
   "category": "design",
+  "description": "A group of related color swatches.",
   "keywords": [ "colors", "styles", "visual identity" ],
+
   "attributes": {
     "hideHex":  {
       "type": "boolean"
@@ -15,7 +19,36 @@
       "type": "boolean"
     }
   },
+
+  "example": {
+    "innerBlocks": [
+      {
+        "name": "tdg/color",
+        "attributes": {
+          "hex": "#604c8d",
+          "label": "Cyber Grape"
+        }
+      },
+      {
+        "name": "tdg/color",
+        "attributes": {
+          "hex": "#559cad",
+          "label": "Pacific Blue"
+        }
+      },
+      {
+        "name": "tdg/color",
+        "attributes": {
+          "hex": "#c1b2ab",
+          "label": "Pale Silver"
+        }
+      }
+    ],
+
+  },
+
   "script": "file:../../../build/color-palette.min.js",
   "editorStyle": "file:../../../build/styles-editor.min.css",
   "style": "file:../../../build/styles-frontend.min.css"
+
 }

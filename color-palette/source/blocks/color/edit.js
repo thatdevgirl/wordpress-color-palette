@@ -7,16 +7,16 @@ import ntc from '../../vendor/ntc.js';
 const ColorEdit = ( props ) => {
 
   const { ColorPicker, PanelBody, TextControl } = wp.components;
-  const { InspectorControls } = wp.blockEditor;
-  const { Fragment } = wp.element;
+  const { InspectorControls, useBlockProps } = wp.blockEditor;
 
   // Get the values needed from props.
   const { setAttributes } = props;
   const { hex, label, autoLabel } = props.attributes;
+  const blockProps = useBlockProps();
 
   // Declare change event handlers.
-  const onChangeHex       = ( value ) => { setAttributes( { hex: value.hex } ) };
-  const onChangeLabel     = ( value ) => { setAttributes( { label: value } ) };
+  const onChangeHex   = ( value ) => { setAttributes( { hex: value.hex } ) };
+  const onChangeLabel = ( value ) => { setAttributes( { label: value } ) };
 
   // Get the automatic name for this hex from the "Name That Color" API.
   // This will be used as the placeholder text for the Color Label attribute
@@ -31,7 +31,7 @@ const ColorEdit = ( props ) => {
 
   // Return the edit UI.
   return (
-    <Fragment>
+    <div { ...blockProps }>
 
       <InspectorControls>
 
@@ -65,7 +65,7 @@ const ColorEdit = ( props ) => {
 
       </div>
 
-    </Fragment>
+    </div>
   );
 
 };
