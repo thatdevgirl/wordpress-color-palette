@@ -62,3 +62,27 @@ $lg: 1200px;
     }
   }
 }
+
+
+/**
+ * Search container.
+ */
+.cp-palette-search {
+  margin-bottom: 1rem;
+
+  &-label {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  &-input {
+    margin-right: 0.5rem;
+    min-width: 25vw;
+    padding: 0.25rem;
+  }
+
+  &-submit {
+    cursor: pointer;
+    padding: 0.25rem 1rem;
+  }
+}

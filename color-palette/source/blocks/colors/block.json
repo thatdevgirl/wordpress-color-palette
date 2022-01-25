@@ -17,6 +17,10 @@
     },
     "hideCMYK": {
       "type": "boolean"
+    },
+    "search": {
+      "type": "boolean",
+      "default": false
     }
   },
 
