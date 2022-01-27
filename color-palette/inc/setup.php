@@ -56,9 +56,17 @@ class Setup {
    * @return void
    */
   public function enqueue_frontend_assets(): void {
+    $js = '../build/color-palette-frontend.min.js';
     $css= '../build/styles-frontend.min.css';
 
     $handle = 'color-palette-frontend';
+
+    wp_enqueue_script(
+      $handle,
+      plugins_url( $js, __FILE__ ),
+      [ 'jquery' ],
+      filemtime( plugin_dir_path( __FILE__ ) . $js )
+    );
 
     wp_enqueue_style(
       $handle,

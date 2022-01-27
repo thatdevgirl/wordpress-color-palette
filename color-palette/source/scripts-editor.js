@@ -1,5 +1,5 @@
 /**
- * Master JS file for this plugin.
+ * Master JS file for the editor scripts for this plugin.
  */
 
 import Color from './blocks/color/index.js';

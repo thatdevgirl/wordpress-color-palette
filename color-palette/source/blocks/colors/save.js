@@ -19,8 +19,10 @@ const ColorsSave = ( props ) => {
   if ( search ) {
     maybeSearch = (
       <form className='cp-palette-search'>
-        <label for='cp-palette-search-input' className='cp-palette-search-label'>Search for a color</label>
-        <input type='text' id='cp-palette-search-input' className='cp-palette-search-input' />
+        <fieldset>
+          <label className='cp-palette-search-label'>Search for a color</label>
+          <input type='text' className='cp-palette-search-input' />
+        </fieldset>
         <input type='submit' className='cp-palette-search-submit' value='Search' />
       </form>
     );

@@ -9,11 +9,23 @@ const gulp       = require( 'gulp' ),
 
 
 /**
- * Javascript build task.
+ * Javascript build tasks.
  */
 
-function jsTask() {
-  return browserify( { entries: [ 'color-palette/source/scripts.js' ] } )
+// Front-end.
+function jsFrontendTask() {
+  return browserify( { entries: [ 'color-palette/source/scripts-frontend.js' ] } )
+    .transform( 'babelify', { presets: [ '@babel/preset-env' ] } )
+    .bundle()
+    .pipe( source( 'color-palette-frontend.min.js' ) )
+    .pipe( buffer() )
+    .pipe( uglify() )
+    .pipe( gulp.dest( 'color-palette/build' ) );
+}
+
+// Editor.
+function jsEditorTask() {
+  return browserify( { entries: [ 'color-palette/source/scripts-editor.js' ] } )
     .transform( 'babelify', { presets: [ '@babel/preset-env', '@babel/preset-react' ] } )
     .bundle()
     .pipe( source( 'color-palette.min.js' ) )
@@ -50,6 +62,6 @@ function cssEditorTask() {
  * Task definitions.
  */
 
-gulp.task( 'default', gulp.series( jsTask, cssFrontendTask, cssEditorTask ) );
-gulp.task( 'js', jsTask );
+gulp.task( 'default', gulp.series( jsFrontendTask, jsEditorTask, cssFrontendTask, cssEditorTask ) );
+gulp.task( 'js', gulp.series( jsFrontendTask, jsEditorTask ) );
 gulp.task( 'css', gulp.series( cssFrontendTask, cssEditorTask ) );
