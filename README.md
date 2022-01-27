@@ -26,6 +26,10 @@ You can select the "Color block style" inside the __Color Palette__ block by usi
 
 Inside the __Color Palette__ block, you can select which color codes (Hex, RGB, or CMYK) should be hidden on the page. These options are in the Inspector Panel and apply to _all_ color blocks inside the palette.
 
+## Search option
+
+You can optionally include search functionality inside the __Color Palette__ block, via an option in the Inspector Panel. If enabled, a keyword search form will appear above the color blocks inside the palette, that will allow an end-user to search for any color in the palette by name.
+
 ## Reusability
 
 If you need to use the same color palette on multiple pages or posts, simply save the __Color Palette__ block with all of your colors as a reusable block via the post editor.
