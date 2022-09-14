@@ -3,7 +3,7 @@ const gulp       = require( 'gulp' ),
       buffer     = require( 'vinyl-buffer' ),
       clean      = require( 'gulp-clean-css' ),
       rename     = require( 'gulp-rename' ),
-      sass       = require( 'gulp-sass' ),
+      sass       = require( 'gulp-dart-sass' ),
       source     = require( 'vinyl-source-stream' ),
       uglify     = require( 'gulp-uglify' );
 
@@ -42,7 +42,7 @@ function jsEditorTask() {
 // Front-end.
 function cssFrontendTask() {
   return gulp.src( 'color-palette/source/styles-frontend.scss' )
-    .pipe( sass().on( 'error', sass.logError ) )
+    .pipe( sass({ outputStyle: 'compressed' }) )
     .pipe( clean() )
     .pipe( rename( {suffix: '.min'} ) )
     .pipe( gulp.dest( 'color-palette/build' ) );
@@ -51,7 +51,7 @@ function cssFrontendTask() {
 // Editor.
 function cssEditorTask() {
   return gulp.src( 'color-palette/source/styles-editor.scss' )
-    .pipe( sass().on( 'error', sass.logError ) )
+    .pipe( sass({ outputStyle: 'compressed' }) )
     .pipe( clean() )
     .pipe( rename( {suffix: '.min'} ) )
     .pipe( gulp.dest( 'color-palette/build' ) );

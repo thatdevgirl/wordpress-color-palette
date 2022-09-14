@@ -5,7 +5,7 @@
   "name": "tdg/colors",
   "title": "Color Palette",
   "category": "design",
-  "description": "A group of related color swatches.",
+  "description": "A group of related color swatches",
   "keywords": [ "colors", "styles", "visual identity" ],
 
   "attributes": {
@@ -47,7 +47,7 @@
           "label": "Pale Silver"
         }
       }
-    ],
+    ]
 
   },
 
