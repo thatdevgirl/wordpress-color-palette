@@ -1,6 +1,6 @@
 {
-
-  "api_version": 2,
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
 
   "name": "tdg/colors",
   "title": "Color Palette",
