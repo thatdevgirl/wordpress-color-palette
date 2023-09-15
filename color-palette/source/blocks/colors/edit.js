@@ -13,7 +13,7 @@ const ColorsEdit = ( props ) => {
 
   // Get attributes from props.
   const { setAttributes } = props;
-  const { hideHex, hideRGB, hideCMYK, hideCopy, search } = props.attributes;
+  const { hideHex, hideRGB, hideCMYK, showCopy, search } = props.attributes;
   const blockProps = useBlockProps();
 
 
@@ -25,7 +25,7 @@ const ColorsEdit = ( props ) => {
   const onChangeHideHex  = ( value ) => { setAttributes( { hideHex: value } ) };
   const onChangeHideRGB  = ( value ) => { setAttributes( { hideRGB: value } ) };
   const onChangeHideCMYK = ( value ) => { setAttributes( { hideCMYK: value } ) };
-  const onChangeHideCopy = ( value ) => { setAttributes( { hideCopy: value } ) };
+  const onChangeShowCopy = ( value ) => { setAttributes( { showCopy: value } ) };
   const onChangeSearch   = ( value ) => { setAttributes( { search: value } ) };
 
 
@@ -68,10 +68,10 @@ const ColorsEdit = ( props ) => {
           />
 
           <ToggleControl
-            label='Hide Copy Button'
-            help={ hideCopy ? 'Copy button is hidden.' : 'Copy button is displayed.' }
-            checked={ hideCopy }
-            onChange={ onChangeHideCopy }
+            label='Show copy button'
+            help={ showCopy ? 'Copy button is displayed.' : 'Copy button is hidden.' }
+            checked={ showCopy }
+            onChange={ onChangeShowCopy }
           />
 
         </PanelBody>

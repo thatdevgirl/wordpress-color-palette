@@ -48,9 +48,9 @@ class Color {
     if ( !$hex ) { return ''; }
 
     // Get the HTML for the different color code formats.
-    $hex_html = $this->get_hex_html( $hex, $hide_hex );
-    $rgb_html = $this->get_rgb_html( $hex, $hide_rgb );
-    $cmyk_html = $this->get_cmyk_html( $hex, $hide_cmyk );
+    $hex_html = $this->get_hex_html( $hex );
+    $rgb_html = $this->get_rgb_html( $hex );
+    $cmyk_html = $this->get_cmyk_html( $hex );
 
     // Get the label. If there is no actual label, the label is the
     // automatically generated label.
@@ -79,7 +79,7 @@ HTML;
    * @return string
    */
   private function get_hex_html( string $hex ): string {
-    return '<p class="cp-color-hex">' . $hex . '</p>';
+    return '<p class="cp-color-hex">' . $hex . $this->get_copy_icon() . '</p>';
   }
 
 
@@ -180,6 +180,31 @@ HTML;
 
     // Return the CMYK values as a string since they are display-only.
     return [ $cyan, $magenta, $yellow, $black ];
+  }
+
+
+  /**
+   * get_copy_icon()
+   * 
+   * Get the copy hex code icon code for the front-end. This is static code,
+   * but it is long (because of the SVG), so it is far easier to include it in
+   * its own function.
+   * 
+   * Icon reference: https://thenounproject.com/icon/copy-4651792/
+   * 
+   * @return string
+   */
+  private function get_copy_icon(): string {
+    return <<<HTML
+      <a href="#" role="button" class="cp-copy-hex">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 45" x="0px" y="0px" aria-label="Copy hex code">
+          <g>
+            <path d="M18.88889,12.66667H6.44444A4.44967,4.44967,0,0,0,2,17.11111V29.55556A4.44967,4.44967,0,0,0,6.44444,34H18.88889a4.44967,4.44967,0,0,0,4.44444-4.44444V17.11111A4.44967,4.44967,0,0,0,18.88889,12.66667Zm2.66667,16.88889a2.66958,2.66958,0,0,1-2.66667,2.66666H6.44444a2.66958,2.66958,0,0,1-2.66666-2.66666V17.11111a2.66959,2.66959,0,0,1,2.66666-2.66667H18.88889a2.66959,2.66959,0,0,1,2.66667,2.66667Z"/>
+            <path d="M29.55556,2H17.11111a4.44967,4.44967,0,0,0-4.44444,4.44444V10a.88889.88889,0,1,0,1.77777,0V6.44444a2.66959,2.66959,0,0,1,2.66667-2.66666H29.55556a2.66958,2.66958,0,0,1,2.66666,2.66666V18.88889a2.66958,2.66958,0,0,1-2.66666,2.66667H26a.88889.88889,0,1,0,0,1.77777h3.55556A4.44967,4.44967,0,0,0,34,18.88889V6.44444A4.44967,4.44967,0,0,0,29.55556,2Z"/>
+          </g>
+        </svg>
+      </a>
+HTML;
   }
 
 }

@@ -6,11 +6,12 @@ $black: #000;
 $white: #fff;
 $gray:  darken( $white, 20% );
 
+
 .cp-color {
   border: 1px solid $gray;
   border-radius: 0.25rem;
   color: $black;
-  margin-bottom: 2rem;
+  margin-block-end: 2rem;
   padding: 2px;
 
   .swatch {
@@ -23,7 +24,7 @@ $gray:  darken( $white, 20% );
     margin: 0;
 
     &:first-of-type {
-      padding-top: 0.5rem;
+      padding-block-start: 0.5rem;
     }
 
     // Need the class here for specificity.
@@ -49,6 +50,7 @@ $gray:  darken( $white, 20% );
   &.hide-hex .cp-color-hex   { display: none; }
   &.hide-rgb .cp-color-rgb   { display: none; }
   &.hide-cmyk .cp-color-cmyk { display: none; }
+  &.show-copy .cp-copy-hex   { display: inline-block; }
 }
 
 
@@ -75,22 +77,22 @@ $gray:  darken( $white, 20% );
 
   .cp-color-name {
     font-size: 1.4rem;
-    padding-top: 1rem;
+    padding-block-start: 1rem;
   }
 
   .cp-color-hex {
-    border-bottom: 1px solid $gray;
+    border-block-end: 1px solid $gray;
     line-height: 1;
-    padding-bottom: 2rem;
+    padding-block-end: 2rem;
   }
 
   .cp-color-rgb {
     line-height: 1.2;
-    padding-top: 1.5rem;
+    padding-block-start: 1.5rem;
   }
 
   .cp-color-cmyk {
-    padding-bottom: 1rem;
+    padding-block-end: 1rem;
   }
 
 }
@@ -107,7 +109,7 @@ $gray:  darken( $white, 20% );
 
   .swatch {
     border-radius: 50%;
-    padding: 50% 50%;
+    padding: 50%;
   }
 
   p {
@@ -118,6 +120,16 @@ $gray:  darken( $white, 20% );
 
   .cp-color-name {
     font-size: 1.4rem;
-    padding-top: 1rem;
+    padding-block-start: 1rem;
   }
+}
+
+
+/**
+ * Copy hex code icon. This icon is hidden by default.
+ */
+
+.cp-copy-hex {
+  display: none;
+  width: 1rem;
 }
