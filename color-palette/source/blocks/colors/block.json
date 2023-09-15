@@ -31,6 +31,16 @@
     }
   },
 
+  "supports": {
+    "customClassName": true
+  },
+
+  "styles": [
+    { "name": "basic-card",    "label": "Basic Card", "isDefault": true },
+    { "name": "stylized-card", "label": "Stylized Card" },
+    { "name": "circle",        "label": "Circle" }
+  ],
+
   "example": {
     "innerBlocks": [
       {

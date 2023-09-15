@@ -13,7 +13,7 @@ const ColorsEdit = ( props ) => {
 
   // Get attributes from props.
   const { setAttributes } = props;
-  const { hideHex, hideRGB, hideCMYK, showCopy, search } = props.attributes;
+  const { className, hideHex, hideRGB, hideCMYK, showCopy, search } = props.attributes;
   const blockProps = useBlockProps();
 
 
@@ -88,7 +88,7 @@ const ColorsEdit = ( props ) => {
         </PanelBody>
       </InspectorControls>
 
-      <div className={`cp-palette ${ props.className }`}>
+      <div className={`cp-palette ${ className }`}>
         <div className={ colorsClasses }>
           <InnerBlocks
             template={ getColorsTemplate() }

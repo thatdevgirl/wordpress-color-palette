@@ -9,10 +9,13 @@ const ColorsSave = ( props ) => {
   const { InnerBlocks } = wp.blockEditor;
 
   // Get the values needed from props.
-  const { search } = props.attributes;
+  const { className, search } = props.attributes;
 
   // Figure out what classes should be applied to the colors.
   const colorsClasses = GetClasses( props );
+
+  // Set up container classes. 
+  let containerClasses = className ? className + ' cp-palette' : 'cp-palette';
 
   // Create the search form markup (optional).
   let maybeSearch = '';
@@ -29,7 +32,7 @@ const ColorsSave = ( props ) => {
   }
 
   return (
-    <div className='cp-palette'>
+    <div className={ containerClasses }>
       { maybeSearch }
       <div className={ colorsClasses }>
         <InnerBlocks.Content />
