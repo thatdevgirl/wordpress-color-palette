@@ -46,8 +46,8 @@ $gray:  darken( $white, 20% );
  */
 
 .cp-colors {
-  &.hide-hex .cp-color-hex { display: none; }
-  &.hide-rgb .cp-color-rgb { display: none; }
+  &.hide-hex .cp-color-hex   { display: none; }
+  &.hide-rgb .cp-color-rgb   { display: none; }
   &.hide-cmyk .cp-color-cmyk { display: none; }
 }
 

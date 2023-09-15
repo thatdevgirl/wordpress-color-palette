@@ -10,34 +10,41 @@ const ColorsEdit = ( props ) => {
   const { InnerBlocks, InspectorControls, useBlockProps } = wp.blockEditor;
   const { PanelBody, ToggleControl } = wp.components;
 
+
   // Get attributes from props.
   const { setAttributes } = props;
-  const { hideHex, hideRGB, hideCMYK, search } = props.attributes;
+  const { hideHex, hideRGB, hideCMYK, hideCopy, search } = props.attributes;
   const blockProps = useBlockProps();
+
 
   // Figure out what classes should be applied to the colors.
   const colorsClasses = GetClasses( props );
+
 
   // Change event handlers.
   const onChangeHideHex  = ( value ) => { setAttributes( { hideHex: value } ) };
   const onChangeHideRGB  = ( value ) => { setAttributes( { hideRGB: value } ) };
   const onChangeHideCMYK = ( value ) => { setAttributes( { hideCMYK: value } ) };
+  const onChangeHideCopy = ( value ) => { setAttributes( { hideCopy: value } ) };
   const onChangeSearch   = ( value ) => { setAttributes( { search: value } ) };
+
 
   // Set of allowed child blocks.
   const allowedBlocks = [ 'tdg/color' ];
+
 
   // Template for child cards.
   const getColorsTemplate = memoize( () => {
     return times( 3, () => [ 'tdg/color' ] );
   } );
 
+  
   // Return the edit UI.
   return (
     <div { ...blockProps }>
 
       <InspectorControls>
-        <PanelBody title='Color code display options' initialOpen={ true }>
+        <PanelBody title='Color code options' initialOpen={ true }>
 
           <ToggleControl
             label='Hide Hex'
@@ -58,6 +65,13 @@ const ColorsEdit = ( props ) => {
             help={ hideCMYK ? 'CMYK code is hidden.' : 'CMYK code is displayed.' }
             checked={ hideCMYK }
             onChange={ onChangeHideCMYK }
+          />
+
+          <ToggleControl
+            label='Hide Copy Button'
+            help={ hideCopy ? 'Copy button is hidden.' : 'Copy button is displayed.' }
+            checked={ hideCopy }
+            onChange={ onChangeHideCopy }
           />
 
         </PanelBody>

@@ -36,34 +36,86 @@ class Color {
    * Render the block's front-end code.
    *
    * @param array $attributes
+   * 
    * @return string
    */
   public function render( $attributes ): string {
+    // Get relevant attributes, for reading ease.
+    $hex = $attributes['hex'] ?? null;
+
     // If there is no hex value, do not display a swatch because there is
     // nothing to display here.
-    $hex = $attributes[ 'hex' ];
     if ( !$hex ) { return ''; }
+
+    // Get the HTML for the different color code formats.
+    $hex_html = $this->get_hex_html( $hex, $hide_hex );
+    $rgb_html = $this->get_rgb_html( $hex, $hide_rgb );
+    $cmyk_html = $this->get_cmyk_html( $hex, $hide_cmyk );
 
     // Get the label. If there is no actual label, the label is the
     // automatically generated label.
     $label = $attributes['label'] ? $attributes['label'] : $attributes['autoLabel'];
 
-    // Get Hex converted to RGB and CMYK.
-    $rgb = implode( ', ', $this->hex2rgb( $hex ) );
-    $cmyk = implode( ', ', $this->hex2cmyk( $hex ) );
-
     // Construct the HTML.
-    $html = <<<HTML
+    return <<<HTML
       <div class="cp-color">
         <div class="swatch" style="background-color: $hex"></div>
         <p class="cp-color-name">$label</p>
-        <p class="cp-color-hex">$hex</p>
-        <p class="cp-color-rgb">RGB: $rgb</p>
-        <p class="cp-color-cmyk">CMYK: $cmyk</p>
+        $hex_html
+        $rgb_html
+        $cmyk_html
       </div>
 HTML;
+  }
 
-    return $html;
+
+  /**
+   * get_hex_html()
+   * 
+   * Get the markup for the hex code.
+   * 
+   * @param string $hex
+   * 
+   * @return string
+   */
+  private function get_hex_html( string $hex ): string {
+    return '<p class="cp-color-hex">' . $hex . '</p>';
+  }
+
+
+  /**
+   * get_rgb_html()
+   * 
+   * Get the markup for the RBG code (based on the passed-in hex code).
+   * 
+   * @param string $hex
+   * 
+   * @return string
+   */
+  private function get_rgb_html( string $hex ): string {
+    // If we're still here, calculate the RGB code based on the hex.
+    $rgb = implode( ', ', $this->hex2rgb( $hex ) );
+
+    // Return the markup!
+    return '<p class="cp-color-rgb">RGB: ' . $rgb . '</p>';
+  }
+
+
+  /**
+   * get_cmyk_html()
+   * 
+   * Get the markup for the CMYK code (based on the passed-in hex code). 
+   * 
+   * @param string $hex
+   * 
+   * @return string
+   */
+  private function get_cmyk_html( string $hex ): string {
+    // If we're still here, calculate the CMYK code based on the hex.
+    $cmyk = implode( ', ', $this->hex2cmyk( $hex ) );
+
+    // Return the markup!
+    return '<p class="cp-color-cmyk">CMYK: ' . $cmyk . '</p>';
   }
 
 
@@ -73,9 +125,10 @@ HTML;
    * Convert Hex color value to RBG.
    *
    * @param string $hex
+   * 
    * @return array
    */
-  private function hex2rgb( $hex ): array {
+  private function hex2rgb( string $hex ): array {
     $hex = str_replace( '#', '', $hex );
 
     if ( strlen( $hex ) == 3 ) {
@@ -99,9 +152,10 @@ HTML;
    * Convert Hex color value to CMYK.
    *
    * @param string $hex
+   * 
    * @return array
    */
-  private function hex2cmyk( $hex ): array {
+  private function hex2cmyk( string $hex ): array {
     $hex = str_replace( '#', '', $hex );
 
     // Convert to RGB first.

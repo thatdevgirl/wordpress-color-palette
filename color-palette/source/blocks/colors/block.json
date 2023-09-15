@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 2,
+  "apiVersion": 3,
 
   "name": "tdg/colors",
   "title": "Color Palette",
@@ -10,13 +10,20 @@
 
   "attributes": {
     "hideHex":  {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "hideRGB":  {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "hideCMYK": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
+    },
+    "hideCopy": {
+      "type": "boolean",
+      "default": true
     },
     "search": {
       "type": "boolean",
