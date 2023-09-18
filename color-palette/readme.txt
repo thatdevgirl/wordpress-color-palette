@@ -36,6 +36,7 @@ Give each color block a color using the selector in the Inspector Panel on the r
 
 = 4.3 =
 * Added an optional "copy" button to the front-end that allows visitors to copy the hex code for a given color.
+* Bug fix to allow block styles to display on both in the editor UI and front-end.
 
 = 4.2 =
 * Tested for compatibility with WordPress 5.9.
