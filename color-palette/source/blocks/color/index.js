@@ -14,7 +14,6 @@ const Color = ( () => {
 
   registerBlockType( Metadata, {
     icon: Icons.block,
-    parent: [ 'tdg/color' ],
     edit: ( props ) => { return ( Edit( props ) ); },
     save: () => { return null; }
   } );

@@ -66,10 +66,5 @@
       }
     ]
 
-  },
-
-  "script": "file:../../../build/color-palette.min.js",
-  "editorStyle": "file:../../../build/styles-editor.min.css",
-  "style": "file:../../../build/styles-frontend.min.css"
-
+  }
 }

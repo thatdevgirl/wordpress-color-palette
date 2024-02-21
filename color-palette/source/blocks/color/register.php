@@ -24,7 +24,7 @@ class Color {
    * @return void
    */
   public function register(): void {
-    register_block_type_from_metadata( __DIR__, [
+    register_block_type( __DIR__, [
       'render_callback' => [ $this, 'render' ]
     ] );
   }

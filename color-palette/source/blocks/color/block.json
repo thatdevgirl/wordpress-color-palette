@@ -7,7 +7,6 @@
   "category": "design",
   "description": "A single color block.",
   "keywords": [ "colors", "styles", "visual identity" ],
-  "parent": [ "tdg/colors" ],
 
   "attributes": {
     "hex":  {
@@ -29,10 +28,5 @@
       "hex": "#604c8d",
       "label": "Cyber Grape"
     }
-  },
-
-  "script": "file:../../../build/color-palette.min.js",
-  "editorStyle": "file:../../../build/styles-editor.min.css",
-  "style": "file:../../../build/styles-frontend.min.css"
-
+  }
 }

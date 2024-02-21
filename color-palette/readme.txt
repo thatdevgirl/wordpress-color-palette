@@ -3,8 +3,8 @@ Contributors: thatdevgirl
 Donate Link: https://www.buymeacoffee.com/thatdevgirl
 Tags: colors, branding, palette, visual identity, block
 Requires at least: 5.0
-Tested up to: 6.4
-Stable tag: 4.3
+Tested up to: 6.5
+Stable tag: 4.3.1
 
 Add a Color Palette block to pages in the post editor.
 
@@ -33,6 +33,11 @@ Give each color block a color using the selector in the Inspector Panel on the r
 5. The Color Palette block in the front-end, displaying the colors as circles.
 
 == Changelog ==
+
+= 4.3.1 =
+* Tested for compatibility with WordPress 6.5.
+* Fix to prevent duplicate block registration.
+* Allow a single color block to be added to a post.
 
 = 4.3 =
 * Added an optional "copy" button to the front-end that allows visitors to copy the hex code for a given color.
