@@ -6,9 +6,17 @@ Requires at least: 5.0
 Tested up to: 6.7
 Stable tag: 4.3.1
 
-Add a Color Palette block to pages in the post editor.
+[Deprecated!] Add a Color Palette block to pages in the post editor.
 
 == Description ==
+
+**Important notice!**
+
+Due to a shift in my personal and professional priorities, I have decided to take a step back from development. As a result, this plugin is no longer being actively maintained. You are welcome to [fork it](https://github.com/thatdevgirl/wordpress-color-palette) and create your own updates. If you do so, please credit me as the original author. (I would also love to hear about this plugin’s new life!)
+
+All the best, Joni.
+
+--
 
 The Color Palette block displays a group of colors on your page. The block starts with 3 individual Color blocks, but you can add additional blocks or remove excess blocks as needed.
 

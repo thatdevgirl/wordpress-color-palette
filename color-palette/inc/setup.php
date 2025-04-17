@@ -12,10 +12,42 @@ class Setup {
    * _construct()
    */
   public function __construct() {
+    add_action( 'admin_notices', [ $this, 'sunset' ] );
     add_action( 'enqueue_block_assets', [ $this, 'enqueue_block_assets' ] );
     add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_frontend_assets' ] );
     add_filter( 'plugin_row_meta', [ $this, 'add_meta' ], 10, 2 );
     add_action( 'in_plugin_update_message-color-palette/color-palette.php', [ $this, 'update_message' ], 10, 2 );
+  }
+
+
+  /**
+   * sunset()
+   *
+   * Sunset notice that is displayed with the plugin is activated.
+   *
+   * @return void
+   */
+  public function sunset(): void {
+    $screen = get_current_screen();
+    if ($screen && ( $screen->id == 'plugins') ) {
+      print <<<HTML
+        <div id="sunset" class="notice notice-warning is-dismissible">
+          <p><strong>Important notice about the Color Palette plugin:</strong></p>
+          <p>
+            Due to a shift in my personal and professional priorities, I have decided
+            to take a step back from development. As a result, this plugin is <strong>no longer
+            being actively maintained.</strong> You are welcome to
+            <a href="https://github.com/thatdevgirl/wordpress-color-palette" target="_blank">fork it</a>
+            and create your own updates. If you do so, please credit me as the original author.
+            (I would also love to
+            <a href="mailto:joni@jhalabi.com">hear about this plugin’s new life</a>!)
+          </p>
+          <p>
+            All the best, Joni.
+          </p>
+        </div>
+HTML;
+    }
   }
 
 
